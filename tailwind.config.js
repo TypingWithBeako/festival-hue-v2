@@ -13,7 +13,7 @@ const config = {
         xl: "1024px",
       },
       center: true,
-      padding: "1rem",
+      padding: "0",
     },
     extend: {
       fontFamily: {

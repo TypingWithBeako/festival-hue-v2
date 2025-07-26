@@ -3,6 +3,10 @@ import { useRef } from "react";
 import NavigationBar from "@/components/navbar";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { Link, Button } from "@heroui/react";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 export default function HeroSection() {
   const navRef = useRef<HTMLDivElement>(null); // Ref for the navigation bar
   const textRef = useRef<HTMLDivElement>(null); // Ref for the text container
@@ -47,13 +51,22 @@ export default function HeroSection() {
           <div className="container">
             <div className="flex flex-row justify-center md:justify-start">
               <div className="flex flex-col w-[72%] md:px-6">
-                <h1 className="text-7xl/20 text-primary my-8 text-center font-extrabold tracking-wide text-shadow-md/25 md:text-nowrap font-literata">
+                <h1 className="text-5xl/20 md:text-7xl/20 text-primary my-8 text-center font-extrabold tracking-wide text-shadow-md/25 md:text-nowrap font-literata">
                   Festival Huế 2025
                 </h1>
                 <p className="text-xl w-full text-secondary font-light leading-relaxed relative pl-6 before:absolute before:left-0 before:top-0 before:h-full before:w-1 before:bg-secondary">
                   Khám phá những câu chuyện ngàn năm, trải nghiệm không gian văn
                   hóa độc đáo và hòa mình vào sắc màu lễ hội bất tận!
                 </p>
+                <Button
+                  as={Link}
+                  className="mx-auto md:mx-0 bg-secondary w-40 mt-6 text-white hover:bg-secondary/80 hover:shadow-lg transition-all"
+                  href="#"
+                  variant="flat"
+                >
+                  Tìm hiểu thêm
+                  <FontAwesomeIcon icon={faChevronRight} className="text-xs" />
+                </Button>
               </div>
             </div>
           </div>

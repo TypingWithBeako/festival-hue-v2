@@ -60,10 +60,6 @@ export default function NavigationBar() {
       }`}
     >
       <NavbarContent>
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
-        />
         <NavbarBrand>
           <Logo />
         </NavbarBrand>
@@ -91,16 +87,10 @@ export default function NavigationBar() {
           </Link>
         </NavbarItem>
       </NavbarContent>
-      <NavbarContent justify="end">
-        <Button
-          as={Link}
-          className="bg-secondary text-white hover:bg-secondary/80 hover:shadow-lg transition-all"
-          href="#"
-          variant="flat"
-        >
-          Đặt vé
-          <FontAwesomeIcon icon={faChevronRight} className=" text-xs" />
-        </Button>
+      <NavbarContent className="sm:hidden" justify="end">
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+        />
       </NavbarContent>
       <NavbarMenu className="overflow-hidden">
         {menuItems.map((item, index) => (
