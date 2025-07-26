@@ -9,6 +9,7 @@ export default function HeroSection() {
   const siteRef = useRef<HTMLDivElement>(null); // Ref for the entire site container
 
   useGSAP(() => {
+    siteRef.current?.classList.remove("hidden");
     // GSAP animation for the navigation bar
     gsap.from(siteRef.current, {
       opacity: 0.25, // Start with opacity 0
@@ -36,7 +37,7 @@ export default function HeroSection() {
   }, [navRef, textRef]);
 
   return (
-    <div ref={siteRef}>
+    <div ref={siteRef} className="hidden">
       <div className="fixed top-0 left-0 w-full z-10" ref={navRef}>
         <NavigationBar />
       </div>
