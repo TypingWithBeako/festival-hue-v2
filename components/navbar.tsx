@@ -1,7 +1,5 @@
 "use client";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import React, { useEffect, useState } from "react";
 import {
   Navbar,
@@ -19,7 +17,12 @@ import Image from "next/image";
 
 export const Logo = () => {
   return (
-    <Tooltip color="secondary" content="Logo Festival Huế" showArrow={true}>
+    <Tooltip
+      color="secondary"
+      placement="right"
+      content="Logo Festival Huế"
+      showArrow={true}
+    >
       <Image
         src="/Logo.png"
         alt="Festival Hue 2025 Logo"
@@ -55,8 +58,8 @@ export default function NavigationBar() {
   return (
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
-      className={`transition-all duration-600 py-2 ${
-        isScrolled ? "bg-secondary/70 -translate-y-1 py-1" : "bg-background/70"
+      className={`transition-all duration-600 ${
+        isScrolled ? "bg-secondary/70 -translate-y-1" : "bg-background/70"
       }`}
     >
       <NavbarContent>
