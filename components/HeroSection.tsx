@@ -65,7 +65,7 @@ export default function HeroSection() {
                 <h1 className="text-6xl/20 md:text-7xl/20 text-primary my-8 text-center font-extrabold tracking-wide text-shadow-md/25 md:text-nowrap font-literata antialiased z-100">
                   Festival Huế 2025
                 </h1>
-                <p className="text-xl w-full text-secondary font-light leading-relaxed relative pl-5 before:absolute before:left-1 before:top-0 before:h-full before:w-1 before:bg-secondary">
+                <p className="text-pretty text-xl w-full text-secondary font-light leading-relaxed relative pl-5 before:absolute before:left-1 before:top-0 before:h-full before:w-1 before:bg-secondary">
                   Khám phá những câu chuyện ngàn năm, trải nghiệm không gian văn
                   hóa độc đáo và hòa mình vào sắc màu lễ hội bất tận!
                 </p>
@@ -81,7 +81,7 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
-          <div className="scroll-indicator self-center absolute bottom-0">
+          <div className="scroll-indicator self-center absolute bottom-0 hidden sm:block">
             <FontAwesomeIcon
               icon={faChevronDown}
               className="text-primary text-2xl animate-bounce"
