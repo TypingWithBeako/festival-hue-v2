@@ -1,10 +1,14 @@
 "use client";
+
 import { useRef } from "react";
 import NavigationBar from "@/components/navbar";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Link, Button } from "@heroui/react";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronRight,
+  faChevronDown,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function HeroSection() {
@@ -42,17 +46,23 @@ export default function HeroSection() {
 
   return (
     <div ref={siteRef} className="hidden">
+      <div className="fallback-background"></div>
       <div className="gradient-background"></div>
       <div className="sticky top-0 left-0 w-full z-10" ref={navRef}>
         <NavigationBar />
       </div>
 
       <div ref={textRef}>
-        <div className="w-full h-screen flex items-top justify-center items-center leading-8">
+        <div
+          style={{
+            height: `calc(100vh - 5.5rem)`, // Subtract navbar height from 100vh
+          }}
+          className="w-full flex items-top justify-center items-center leading-8"
+        >
           <div className="container">
             <div className="flex flex-row justify-center">
-              <div className="flex flex-col w-[72%] md:px-6">
-                <h1 className="text-6xl/20 md:text-7xl/20 text-primary my-8 text-center font-extrabold tracking-wide text-shadow-md/25 md:text-nowrap font-literata antialiased">
+              <div className="flex flex-col w-[72%] md:px-6 mt-2">
+                <h1 className="text-6xl/20 md:text-7xl/20 text-primary my-8 text-center font-extrabold tracking-wide text-shadow-md/25 md:text-nowrap font-literata antialiased z-100">
                   Festival Huế 2025
                 </h1>
                 <p className="text-xl w-full text-secondary font-light leading-relaxed relative pl-5 before:absolute before:left-1 before:top-0 before:h-full before:w-1 before:bg-secondary">
@@ -61,7 +71,7 @@ export default function HeroSection() {
                 </p>
                 <Button
                   as={Link}
-                  className="mx-auto md:mx-0 bg-secondary w-40 mt-6 text-white hover:bg-secondary/80 hover:shadow-lg transition-all"
+                  className="mx-auto md:mx-0 bg-secondary w-40 mt-6 text-white hover:bg-secondary/80 hover:shadow-lg hover:scale-103 transition-all duration-400"
                   href="#"
                   variant="flat"
                 >
@@ -70,6 +80,12 @@ export default function HeroSection() {
                 </Button>
               </div>
             </div>
+          </div>
+          <div className="scroll-indicator self-center absolute bottom-0">
+            <FontAwesomeIcon
+              icon={faChevronDown}
+              className="text-primary text-2xl animate-bounce"
+            />
           </div>
         </div>
       </div>

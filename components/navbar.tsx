@@ -42,7 +42,7 @@ export default function NavigationBar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 0) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -59,8 +59,9 @@ export default function NavigationBar() {
     <Navbar
       height={"5rem"}
       isBlurred={isScrolled ? true : false}
+      maxWidth="xl"
       classNames={{
-        item: "px-4 font-literata transition-all duration-300 font-bold text-md hover:scale-101",
+        item: "px-3 font-literata transition-all duration-300 font-bold text-md hover:scale-101",
         content: isScrolled
           ? ""
           : "transition-all duration-300 sm:p-[20px] sm:border-solid sm:border-white sm:bg-background sm:rounded-[40px] sm:shadow-[0px_0px_3rem_rgba(127,137,161,0.604)]",

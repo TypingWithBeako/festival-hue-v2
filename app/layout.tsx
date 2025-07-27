@@ -2,11 +2,9 @@ import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
 import { Providers } from "./providers";
-
 import { siteConfig } from "@/config/site";
 import { fontLiterata, fontSans } from "@/config/fonts";
 import LenisScrollProvider from "@/components/lenis-provider";
-import NavigationBar from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: {
@@ -37,7 +35,7 @@ export default function RootLayout({
       <LenisScrollProvider>
         <body
           className={clsx(
-            "min-h-screen text-foreground bg-background font-sans antialiased",
+            "min-h-screen font-sans antialiased",
             fontSans.variable
           )}
         >
