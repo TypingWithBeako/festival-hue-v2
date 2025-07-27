@@ -9,9 +9,6 @@ const config = {
   ],
   theme: {
     container: {
-      screens: {
-        xl: "1024px",
-      },
       center: true,
       padding: "0",
     },

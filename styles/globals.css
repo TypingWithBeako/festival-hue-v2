@@ -32,7 +32,7 @@
   );
   background-size: 200% 200%;
   animation: gradient-animation 25s ease infinite;  */
-  background-image: url(/4703a94b-d0df-4e25-813d-5e097e321c3b.jpg);
+  background-image: url(/4703a94b-d0df-4e25-813d-5e097e321c3b1.jpg);
   background-position: 50% 15%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -53,4 +53,8 @@
       0 62.5%
     ); /* Diagonal clipping effect */
   }
+}
+
+.text-shadow {
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Dark shadow for depth */
 }

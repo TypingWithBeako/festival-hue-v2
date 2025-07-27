@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Festival Hue 2025",
+  name: "Festival Huế 2025",
   description: "Make beautiful websites regardless of your design experience.",
   navItems: [
     {

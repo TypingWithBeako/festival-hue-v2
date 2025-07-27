@@ -20,16 +20,18 @@ export const Logo = () => {
     <Tooltip
       color="secondary"
       placement="right"
-      content="Logo Festival Huế"
+      content="Biểu tượng Festival Huế"
       showArrow={true}
     >
-      <Image
-        src="/Logo.png"
-        alt="Festival Hue 2025 Logo"
-        width={65}
-        height={65}
-        className="hover:opacity-75 cursor-pointer"
-      ></Image>
+      <a href="https://huefestival.com/">
+        <Image
+          src="/Logo.png"
+          alt="Festival Hue 2025 Logo"
+          width={65}
+          height={65}
+          className="hover:opacity-75 cursor-pointer"
+        ></Image>
+      </a>
     </Tooltip>
   );
 };
