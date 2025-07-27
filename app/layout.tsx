@@ -6,6 +6,7 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontLiterata, fontSans } from "@/config/fonts";
 import LenisScrollProvider from "@/components/lenis-provider";
+import NavigationBar from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: {

@@ -11,43 +11,36 @@
   left: 0;
   width: 100%;
   height: 70%; /* Covers the top half of the viewport */
-  background: linear-gradient(
+  /* background: linear-gradient(
     120deg,
     #6a0dad,
-    /* Primary: Dark Imperial Purple */ #cd7f32,
-    /* Secondary: Dark Golden Yellow */ #00a86b,
-    /* Accent: Jade Green */ #f5f5dc,
-    /* Background: Antique Beige */ #333333 /* Foreground: Deep Charcoal */
+   #cd7f32,
+    #00a86b,
+    #f5f5dc,
+    #333333 
   );
-  background-size: 200% 200%; /* Larger gradient for animation */
-  animation: gradient-animation 25s ease infinite; /* Animate the gradient */
+  background-size: 200% 200%;
+  animation: gradient-animation 25s ease infinite;  */
+  background-image: url(/kinh-thanh-hue-1-1337.jpg);
+  background-position: center bottom 1.5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
   clip-path: polygon(
     0 0,
     100% 0,
-    100% 50%,
-    0 80%
+    100% 45%,
+    0 75%
   ); /* Diagonal clipping effect */
 }
 
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .gradient-background {
     clip-path: polygon(
       0 0,
       100% 0,
-      100% 65%,
-      0 80%
+      100% 45%,
+      0 62.5%
     ); /* Diagonal clipping effect */
+    background-position: center bottom 8rem;
   }
 }

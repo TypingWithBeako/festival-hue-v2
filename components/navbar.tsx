@@ -26,8 +26,8 @@ export const Logo = () => {
       <Image
         src="/Logo.png"
         alt="Festival Hue 2025 Logo"
-        width={45}
-        height={45}
+        width={65}
+        height={65}
         className="hover:opacity-75 cursor-pointer"
       ></Image>
     </Tooltip>
@@ -57,16 +57,25 @@ export default function NavigationBar() {
 
   return (
     <Navbar
+      height={"5rem"}
+      isBlurred={isScrolled ? true : false}
+      classNames={{
+        item: "px-4 font-literata transition-all duration-300 font-bold text-md hover:scale-101",
+        content: isScrolled
+          ? ""
+          : "transition-all duration-300 sm:p-[20px] sm:border-solid sm:border-white sm:bg-background sm:rounded-[40px] sm:shadow-[0px_0px_3rem_rgba(127,137,161,0.604)]",
+        menu: "mt-2 py-6",
+        menuItem:
+          "font-literata transition-all duration-300 font-bold hover:scale-101",
+      }}
       onMenuOpenChange={setIsMenuOpen}
-      className={`transition-all duration-600 ${
-        isScrolled ? "bg-secondary/70 -translate-y-1" : "bg-background/70"
+      className={`transition-all duration-600 py-2 ${
+        isScrolled ? "bg-background/70" : "bg-transparent"
       }`}
     >
-      <NavbarContent>
-        <NavbarBrand>
-          <Logo />
-        </NavbarBrand>
-      </NavbarContent>
+      <NavbarBrand>
+        <Logo />
+      </NavbarBrand>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem isActive>
