@@ -1,6 +1,6 @@
 "use client";
 
-import { useLenis } from "@studio-freight/react-lenis";
+import { useLenis } from "lenis/react";
 import React, { useEffect, useState } from "react";
 import {
   Navbar,

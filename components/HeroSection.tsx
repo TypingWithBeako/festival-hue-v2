@@ -1,8 +1,7 @@
 "use client";
 
-import { useLenis } from "@studio-freight/react-lenis";
+import { useLenis } from "lenis/react";
 import { useRef } from "react";
-import NavigationBar from "@/components/navbar";
 import gsap from "gsap";
 
 import localFont from "next/font/local";
