@@ -67,7 +67,7 @@ export default function HeroSection() {
         duration: 1.5,
         ease: "power3.out",
       },
-      "-=0.5"
+      "-=0.25"
     ); // Overlap with the previous animation
 
     // Split the text into words and animate them

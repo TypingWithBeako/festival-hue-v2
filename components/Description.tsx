@@ -40,9 +40,9 @@ export default function Description() {
         ease: "power2.out", // Smooth easing
         scrollTrigger: {
           trigger: section, // Trigger animation when this section enters the viewport
-          start: "top 80%", // Start animation when the top of the section is 80% down the viewport
-          end: "bottom 20%", // End animation when the top of the section is 20% down the viewport
-          scrub: true, // Smooth scrolling effect
+          start: "top 80%", // Start animation when the TOP of the trigger element hits 80% down from the TOP of the viewport
+          end: "bottom 80%", // End animation when the BOTTOM of the trigger element hits 80% down from the TOP of the viewport          scrub: true, // Smooth scrolling effect
+          scrub: true,
         },
       });
     });
