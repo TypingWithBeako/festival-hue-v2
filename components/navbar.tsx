@@ -80,10 +80,10 @@ export default function NavigationBar() {
         toggleIcon: isScrolled ? "" : "text-white",
       }}
       onMenuOpenChange={setIsMenuOpen}
-      className={`transition-all duration-600 py-2 ${
+      className={`transition-all duration-600 ${
         isScrolled
-          ? "bg-background/70 py-3"
-          : "bg-transparent backdrop-blur-none"
+          ? "bg-background/80 py-1"
+          : "bg-transparent backdrop-blur-none py-2"
       }`}
     >
       <NavbarBrand>

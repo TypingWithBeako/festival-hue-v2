@@ -1,16 +1,64 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import Anh1 from "../public/Anh-1.jpeg";
 import Anh2 from "../public/imageFestival.webp";
+import { useGSAP } from "@gsap/react";
+
+// Register GSAP ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Description() {
+  const dividerRef = useRef(null);
+  const section1Ref = useRef(null); // Ref for Section 1
+  const section2Ref = useRef(null); // Ref for Section 2
+  gsap.registerPlugin(useGSAP);
+  useGSAP(() => {
+    const sections = [section1Ref.current, section2Ref.current];
+
+    gsap.from(dividerRef.current, {
+      opacity: 0,
+      y: 25,
+      duration: 1,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: dividerRef.current,
+        start: "top 100%",
+        end: "bottom 20%",
+        scrub: true,
+      },
+    });
+    // Animate each section
+    sections.forEach((section, _) => {
+      gsap.from(section, {
+        opacity: 0, // Start with opacity 0
+        y: 50, // Start slightly below the viewport
+        duration: 1.5, // Animation duration
+        ease: "power2.out", // Smooth easing
+        scrollTrigger: {
+          trigger: section, // Trigger animation when this section enters the viewport
+          start: "top 80%", // Start animation when the top of the section is 80% down the viewport
+          end: "bottom 20%", // End animation when the top of the section is 20% down the viewport
+          scrub: true, // Smooth scrolling effect
+        },
+      });
+    });
+  }, []);
+
   return (
-    <section id="Description" className="bg-white py-24">
+    <section id="Description" className="bg-white py-20">
       <div className="container mx-auto flex flex-col gap-y-12 px-4 justify-between">
         {/* Section 1: Về Festival Huế 2025 */}
-        <div className="flex w-full flex-col items-center gap-y-8 md:flex-row md:gap-x-12">
+        <div
+          ref={section1Ref}
+          className="flex w-full flex-col items-center gap-y-8 md:flex-row md:gap-x-12"
+        >
           {/* Text Section */}
           <div className="order-1 flex w-full flex-col">
-            <h2 className="text-center text-3xl md:text-5xl font-bold md:text-left font-literata text-primary">
+            <h2 className="text-center text-3xl md:text-4xl font-bold md:text-left font-literata text-primary">
               Về Festival Huế
             </h2>
             <p className="mt-8 text-center text-lg leading-relaxed md:text-left text-balance">
@@ -24,7 +72,6 @@ export default function Description() {
             </p>
           </div>
           {/* Image Section */}
-
           <div className="order-2">
             <Image
               src={Anh1}
@@ -33,9 +80,15 @@ export default function Description() {
             />
           </div>
         </div>
-        <hr className="mx-auto my-8 h-1 w-1/2 border-none bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-400" />{" "}
+        <hr
+          ref={dividerRef}
+          className="mx-auto my-8 h-1 w-1/2 border-none bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-400"
+        />
         {/* Section 2: Festival Huế 2025 – Lễ hội bốn mùa */}
-        <div className="flex w-full flex-col items-center gap-y-8 md:flex-row justify-between gap-x-12">
+        <div
+          ref={section2Ref}
+          className="flex w-full flex-col items-center gap-y-8 md:flex-row justify-between gap-x-12"
+        >
           {/* Text Section */}
           <div className="flex w-full flex-col order-1 md:order-2 ">
             <h2 className="text-balance text-center text-3xl md:text-4xl font-bold md:text-left font-literata text-primary">
@@ -52,7 +105,6 @@ export default function Description() {
               <li>Lễ hội mùa Đông – “Mùa đông xứ Huế”</li>
             </ul>
           </div>
-
           {/* Image Section */}
           <div className="order-2 md:order-1">
             <Image
