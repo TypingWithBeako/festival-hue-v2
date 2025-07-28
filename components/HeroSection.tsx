@@ -78,7 +78,7 @@ export default function HeroSection() {
       <div className="sliced-background"></div>
 
       <div>
-        <div className="w-full h-[100vh] flex items-top justify-center items-center leading-8">
+        <div className="w-full h-[102vh] md:h-[100vh] flex items-top justify-center items-center leading-8">
           <div className="container xl:max-w-[1024px] mt-44">
             <div className="flex flex-row justify-center">
               <div className="flex flex-col w-[72%]  md:px-6 mt-2">
@@ -96,10 +96,13 @@ export default function HeroSection() {
                   hóa độc đáo và hòa mình vào sắc màu lễ hội bất tận!
                 </p>
 
-                <div ref={buttonRef}>
+                <div
+                  className="flex justify-center md:justify-start"
+                  ref={buttonRef}
+                >
                   <Button
                     as={Link}
-                    className="mx-auto md:mx-0 bg-secondary w-40 mt-6 text-white hover:bg-secondary/80 hover:shadow-lg hover:scale-103 transition-all duration-400"
+                    className="bg-secondary w-40 mt-6 text-white hover:bg-secondary/80 hover:shadow-lg hover:scale-103 transition-all duration-400"
                     onPress={() => {
                       lenis?.scrollTo("#Description");
                     }}
