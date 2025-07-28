@@ -1,10 +1,10 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
-import clsx from "clsx";
 import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontLiterata, fontSans } from "@/config/fonts";
 import LenisScrollProvider from "@/components/lenis-provider";
+import NavigationBar from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: {
@@ -33,13 +33,11 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="en">
       <head />
       <LenisScrollProvider>
-        <body
-          className={clsx(
-            "min-h-screen font-sans antialiased",
-            fontSans.variable
-          )}
-        >
-          <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
+        <body>
+          <Providers>
+            <div className="fixed top-0 left-0 w-full z-10">
+              <NavigationBar />
+            </div>
             <div
               className={`relative flex flex-col h-screen ${fontLiterata.variable}`}
             >

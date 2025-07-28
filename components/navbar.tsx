@@ -1,5 +1,6 @@
 "use client";
 
+import { useLenis } from "@studio-freight/react-lenis";
 import React, { useEffect, useState } from "react";
 import {
   Navbar,
@@ -37,10 +38,17 @@ export const Logo = () => {
 };
 
 export default function NavigationBar() {
+  const lenis = useLenis();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const menuItems = ["Trang Chủ", "Làng Nghề", "Ẩm Thực", "Nghệ Thuật"];
+  const menuItems = [
+    { label: "Trang Chủ", sectionId: "#HeroSection" },
+    { label: "Giới Thiệu", sectionId: "#Description" },
+    { label: "Làng Nghề", sectionId: "#Village" },
+    { label: "Ẩm Thực", sectionId: "#Cuisine" },
+    { label: "Nghệ Thuật", sectionId: "#Art" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,21 +67,23 @@ export default function NavigationBar() {
 
   return (
     <Navbar
-      height={"5rem"}
-      isBlurred={isScrolled ? true : false}
-      maxWidth="xl"
+      isBlurred={true}
+      maxWidth="2xl"
       classNames={{
         item: "px-3 font-literata transition-all duration-300 font-bold text-md hover:scale-101",
         content: isScrolled
           ? ""
           : "transition-all duration-300 sm:p-[20px] sm:border-solid sm:border-white sm:bg-background sm:rounded-[40px] sm:shadow-[0px_0px_3rem_rgba(127,137,161,0.604)]",
-        menu: "mt-2 py-6",
+        menu: `py-6 ${isScrolled ? "mt-6" : "mt-4"}`,
         menuItem:
-          "font-literata transition-all duration-300 font-bold hover:scale-101",
+          "cursor-pointer font-literata transition-all duration-300 font-bold hover:scale-101",
+        toggleIcon: isScrolled ? "" : "text-white",
       }}
       onMenuOpenChange={setIsMenuOpen}
       className={`transition-all duration-600 py-2 ${
-        isScrolled ? "bg-background/70" : "bg-transparent"
+        isScrolled
+          ? "bg-background/70 py-3"
+          : "bg-transparent backdrop-blur-none"
       }`}
     >
       <NavbarBrand>
@@ -82,22 +92,57 @@ export default function NavigationBar() {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem isActive>
-          <Link aria-current="page" href="#">
+          <Link
+            className="cursor-pointer"
+            aria-current="page"
+            onPress={() => {
+              lenis?.scrollTo("#HeroSection");
+            }}
+          >
             Trang chủ
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" className="font-medium" href="#">
+          <Link
+            color="foreground"
+            className="font-medium cursor-pointer"
+            onPress={() => {
+              lenis?.scrollTo("#Description");
+            }}
+          >
+            Giới thiệu
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link
+            color="foreground"
+            className="font-medium cursor-pointer"
+            onPress={() => {
+              lenis?.scrollTo("#Village");
+            }}
+          >
             Làng Nghề
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" className="font-medium" href="#">
+          <Link
+            color="foreground"
+            className="font-medium cursor-pointer"
+            onPress={() => {
+              lenis?.scrollTo("#Cuisine");
+            }}
+          >
             Ẩm Thực
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" className="font-medium" href="#">
+          <Link
+            color="foreground"
+            className="font-medium cursor-pointer"
+            onPress={() => {
+              lenis?.scrollTo("#Art");
+            }}
+          >
             Nghệ Thuật
           </Link>
         </NavbarItem>
@@ -109,14 +154,16 @@ export default function NavigationBar() {
       </NavbarContent>
       <NavbarMenu className="overflow-hidden">
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+          <NavbarMenuItem key={index}>
             <Link
-              className="w-full py-2"
+              className="w-full py-2 cursor-pointer"
               color={"foreground"}
-              href="#"
+              onClick={() => {
+                lenis?.scrollTo(item.sectionId);
+              }}
               size="lg"
             >
-              {item}
+              {item.label}
             </Link>
           </NavbarMenuItem>
         ))}
