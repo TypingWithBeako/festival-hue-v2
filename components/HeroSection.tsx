@@ -15,6 +15,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SplitText } from "gsap/all";
+import styles from "./HeroSection.module.scss";
 
 export default function HeroSection() {
   const textRef = useRef<HTMLDivElement>(null); // Ref for the text container
@@ -74,7 +75,7 @@ export default function HeroSection() {
 
   return (
     <div id="HeroSection" ref={siteRef}>
-      <div className="sliced-background"></div>
+      <div className={styles["sliced-background"]}></div>
 
       <div>
         <div className="w-full h-[102vh] md:h-[100vh] flex items-top justify-center items-center leading-8">

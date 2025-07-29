@@ -1,0 +1,43 @@
+.sliced-background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  z-index: 1;
+}
+
+.sliced-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70%; /* Covers the top half of the viewport */
+  background-image: url(/4703a94b-d0df-4e25-813d-5e097e321c3b1.jpg);
+  background-position: 50% 15%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 45%,
+    0 75%
+  ); /* Diagonal clipping effect */
+}
+
+@media screen and (max-width: 992px) {
+  .sliced-background {
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 45%,
+      0 62.5%
+    ); /* Diagonal clipping effect */
+  }
+}

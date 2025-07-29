@@ -1,3 +1,3 @@
 export default function Village() {
-  return <div>Hello world!</div>;
+  return <div>Hello World!</div>;
 }

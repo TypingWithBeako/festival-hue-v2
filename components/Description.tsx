@@ -99,10 +99,18 @@ export default function Description() {
               Festival bốn mùa, bao gồm:
             </p>
             <ul className="mt-4 list-disc pl-8 text-left text-lg leading-relaxed">
-              <li>Lễ hội mùa Xuân – “Xuân Cố đô”</li>
-              <li>Lễ hội mùa Hạ – “Kinh thành tỏa sáng”</li>
-              <li>Lễ hội mùa Thu – “Huế vào Thu”</li>
-              <li>Lễ hội mùa Đông – “Mùa đông xứ Huế”</li>
+              <li>
+                Lễ hội mùa Xuân – <b>"Xuân Cố đô"</b>{" "}
+              </li>
+              <li>
+                Lễ hội mùa Hạ – <b>"Kinh thành tỏa sáng"</b>
+              </li>
+              <li>
+                Lễ hội mùa Thu – <b>"Huế vào Thu"</b>
+              </li>
+              <li>
+                Lễ hội mùa Đông – <b>"Mùa đông xứ Huế"</b>
+              </li>
             </ul>
           </div>
           {/* Image Section */}
