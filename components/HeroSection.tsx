@@ -42,7 +42,7 @@ export default function HeroSection() {
         y: 50,
         duration: 1,
         ease: "power2.out",
-        stagger: 0.07,
+        stagger: 0.05,
       },
       "-=1.5"
     ); // Overlap with the previous animation

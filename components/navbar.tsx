@@ -122,9 +122,9 @@ export default function NavigationBar() {
         {menuItems.map((item, index) => (
           <NavbarItem key={index}>
             <Link
-              className={`hover:text-primary  transition-colors font-medium duration-600 cursor-pointer ${
+              className={`hover:text-primary after:transition-all after:duration-400 transition-colors font-medium duration-600 cursor-pointer ${
                 activeSection === item.sectionId
-                  ? "text-primary font-bold after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-primary after:transition-all after:duration-600"
+                  ? "text-primary font-bold after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-primary"
                   : "text-[#333333] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-primary"
               }`}
               onClick={() => {
