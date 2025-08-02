@@ -38,7 +38,9 @@ export default function RootLayout({
             <div className="fixed top-0 left-0 w-full z-10">
               <NavigationBar />
             </div>
-            <div className={`relative flex flex-col ${fontLiterata.variable}`}>
+            <div
+              className={`relative flex flex-col z-0 ${fontLiterata.variable}`}
+            >
               {children}
             </div>
           </Providers>
