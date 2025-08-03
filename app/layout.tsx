@@ -40,7 +40,7 @@ export default function RootLayout({
               <NavigationBar />
             </div>
             <div
-              className={`relative flex flex-col z-0 ${fontLiterata.variable}`}
+              className={`relative flex flex-col w-full z-0 ${fontLiterata.variable}`}
             >
               {children}
               <ScrollRestorationManager />

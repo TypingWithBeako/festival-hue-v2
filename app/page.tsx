@@ -2,6 +2,7 @@
 import HeroSection from "@/components/sections/HeroSection/HeroSection";
 import Description from "@/components/sections/Description/Description";
 import Village from "@/components/sections/Village/Village";
+import Cuisine from "@/components/Cuisine";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <HeroSection />
       <Description />
       <Village />
+      <Cuisine />
     </>
   );
 }
