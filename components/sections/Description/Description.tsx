@@ -4,8 +4,8 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
-import Anh1 from "../public/Anh-1.jpeg";
-import Anh2 from "../public/imageFestival.webp";
+import Anh1 from "../../../public/Anh-1.jpeg";
+import Anh2 from "../../../public/imageFestival.webp";
 import { useGSAP } from "@gsap/react";
 
 // Register GSAP ScrollTrigger plugin

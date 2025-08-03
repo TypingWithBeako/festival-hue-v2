@@ -17,10 +17,55 @@
   border-radius: 10%;
 } */
 
-.slider-container {
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  bottom: 0; /* Align at the bottom */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Adjust for centering */
-  width: 75%; /* Adjust width as needed */
+  width: 100%;
+  bottom: 0;
+  bottom: -35px !important;
+}
+
+.slider-container {
+  position: relative;
+  bottom: -25%; /* Align at the bottom */
+  width: 100%; /* Adjust width as needed */
+  height: 600px;
+}
+
+.image-slider-image {
+  width: 480px; /* Consistent width */
+  height: 270px; /* Consistent height */
+  overflow: hidden; /* Prevents overflow */
+  padding: 0 15px;
+  outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .image-slider-image {
+    padding: 0 5px;
+  }
+}
+
+.slick-slide img {
+  display: inline-block !important;
+  outline: none;
+}
+
+.image-slider-image img {
+  width: 100%; /* Ensures the image fills the container */
+  height: 100%; /* Ensures the image fills the container */
+  object-fit: cover; /* Ensures the image maintains aspect ratio */
+  display: inline-block; /* Removes default spacing below the image */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+}
+.slick-slide {
+  filter: brightness(0.5); /* Darken all slides */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+  outline: none;
+}
+
+.slick-center {
+  filter: brightness(1); /* Restore brightness for the center slide */
 }

@@ -5,7 +5,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 
 import localFont from "next/font/local";
-const fontThuPhap1 = localFont({ src: "../fonts/Vntfap01.ttf" });
+const fontThuPhap1 = localFont({ src: "../../../fonts/Vntfap01.ttf" });
 
 import { useGSAP } from "@gsap/react";
 import { Link, Button } from "@heroui/react";

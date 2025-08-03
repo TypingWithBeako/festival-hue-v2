@@ -3,8 +3,9 @@ import { Metadata, Viewport } from "next";
 import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontLiterata, fontSans } from "@/config/fonts";
-import LenisScrollProvider from "@/components/lenis-provider";
-import NavigationBar from "@/components/navbar";
+import LenisScrollProvider from "@/components/providers/lenis-provider";
+import NavigationBar from "@/components/sections/HeroSection/navbar";
+import { ScrollRestorationManager } from "./ScrollRestorationManager";
 
 export const metadata: Metadata = {
   title: {
@@ -42,6 +43,7 @@ export default function RootLayout({
               className={`relative flex flex-col z-0 ${fontLiterata.variable}`}
             >
               {children}
+              <ScrollRestorationManager />
             </div>
           </Providers>
         </body>
