@@ -110,7 +110,7 @@ export default function NavigationBar() {
       onMenuOpenChange={setIsMenuOpen}
       className={`transition-all duration-600 ${
         isScrolled
-          ? "bg-background/80 py-1"
+          ? "bg-background/80 py-1 backdrop-blur-sm"
           : "bg-transparent backdrop-blur-none py-2"
       }`}
     >

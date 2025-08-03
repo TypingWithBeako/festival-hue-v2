@@ -34,6 +34,12 @@
   height: 600px;
 }
 
+@media screen and (max-width: 992px) {
+  .slider-container {
+    bottom: -10%; /* Align at the bottom */
+  }
+}
+
 .image-slider-image {
   width: 480px; /* Consistent width */
   height: 270px; /* Consistent height */

@@ -4,7 +4,7 @@ import ImageSlider from "./ImageSlider";
 
 export default function Village() {
   return (
-    <section className={`${styles.image} w-full`} id="Village">
+    <section className={`${styles.image} w-full pt-12`} id="Village">
       <div className="flex justify-center">
         <h1
           className={`text-white font-bold font-literata text-5xl text-center pt-8 ${styles.title}`}
@@ -13,7 +13,7 @@ export default function Village() {
         </h1>
       </div>
 
-      <p className="text-white container font-literata text-2xl text-center pt-8">
+      <p className="text-white container font-literata text-2xl text-left ml-4 md:ml-auto md:text-center pt-12 ">
         Khi nhắc đến Huế – mảnh đất Cố đô thơ mộng – ta không chỉ nhớ đến sông
         Hương, núi Ngự, hay những tà áo dài tím thướt tha, mà còn không thể
         không nhắc đến những làng nghề truyền thống – nơi lưu giữ tinh hoa văn

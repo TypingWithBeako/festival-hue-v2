@@ -49,7 +49,7 @@ export default function Description() {
   }, []);
 
   return (
-    <section id="Description" className="bg-white py-20">
+    <section id="Description" className="bg-white py-20 font-literata">
       <div className="container mx-auto flex flex-col gap-y-12 px-4 justify-between">
         {/* Section 1: Về Festival Huế 2025 */}
         <div
@@ -61,7 +61,7 @@ export default function Description() {
             <h2 className="text-center text-3xl md:text-4xl font-bold md:text-left font-literata text-primary">
               Về Festival Huế
             </h2>
-            <p className="mt-8 text-center text-lg leading-relaxed md:text-left text-balance">
+            <p className="mt-8 text-lg leading-relaxed text-left text-balance">
               Festival Huế là một lễ hội văn hóa nghệ thuật và du lịch quốc tế
               đặc sắc của Việt Nam, ra đời từ năm 2000 sau thành công của
               Festival Việt - Pháp 1992. Lễ hội không chỉ tôn vinh giá trị di
@@ -94,7 +94,7 @@ export default function Description() {
             <h2 className="text-balance text-center text-3xl md:text-4xl font-bold md:text-left font-literata text-primary">
               Festival Huế 2025 – Lễ hội bốn mùa –
             </h2>
-            <p className="mt-8 text-center text-lg leading-relaxed md:text-left">
+            <p className="mt-8 text-lg leading-relaxed text-left">
               Festival Huế 2025 sẽ diễn ra xuyên suốt năm với định hướng
               Festival bốn mùa, bao gồm:
             </p>

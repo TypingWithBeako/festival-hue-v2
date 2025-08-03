@@ -90,7 +90,7 @@ export default function HeroSection() {
                 </h1>
                 <p
                   ref={descriptionRef}
-                  className="text-pretty text-xl w-full text-secondary font-light leading-relaxed relative pl-5 before:absolute before:left-1 before:top-0 before:h-full before:w-1 before:bg-secondary"
+                  className="text-pretty font-literata text-xl w-full text-secondary font-light leading-relaxed relative pl-5 before:absolute before:left-1 before:top-0 before:h-full before:w-1 before:bg-secondary"
                 >
                   Khám phá những câu chuyện ngàn năm, trải nghiệm không gian văn
                   hóa độc đáo và hòa mình vào sắc màu lễ hội bất tận!
@@ -102,7 +102,7 @@ export default function HeroSection() {
                 >
                   <Button
                     as={Link}
-                    className="bg-secondary w-40 mt-6 text-white hover:bg-secondary/80 hover:shadow-lg hover:scale-103 transition-all duration-400"
+                    className="bg-secondary  w-40 mt-6 text-white hover:bg-secondary/80 hover:shadow-lg hover:scale-103 transition-all duration-400"
                     onPress={() => {
                       lenis?.scrollTo("#Description");
                     }}
