@@ -68,12 +68,14 @@
 }
 .slick-slide {
   filter: brightness(0.5); /* Darken all slides */
+  transform: scale(0.9);
   transition: all 0.3s ease-in-out; /* Smooth transition */
   outline: none;
 }
 
 .slick-center {
   filter: brightness(1); /* Restore brightness for the center slide */
+  transform: scale(1);
 }
 
 *::-webkit-scrollbar {
