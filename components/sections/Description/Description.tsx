@@ -22,12 +22,11 @@ export default function Description() {
     gsap.from(dividerRef.current, {
       opacity: 0,
       width: 0,
-      duration: 1,
-      ease: "power1.out",
+      ease: "power4.out",
       scrollTrigger: {
         trigger: dividerRef.current,
         start: "top 100%",
-        end: "bottom 80%",
+        end: "bottom 70%",
         scrub: true,
       },
     });
