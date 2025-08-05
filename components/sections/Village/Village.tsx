@@ -4,7 +4,7 @@ import ImageSlider from "./ImageSlider";
 
 export default function Village() {
   return (
-    <section className="w-full mb-24 md:mb-0" id="Village">
+    <section className="w-full" id="Village">
       <div className={`${styles.image}`}></div>
       <div className="flex justify-center">
         <h1

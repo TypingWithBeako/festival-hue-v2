@@ -31,7 +31,6 @@
   position: relative;
   margin-top: 60px;
   width: 100%; /* Adjust width as needed */
-  height: 600px;
 }
 
 @media screen and (max-width: 992px) {
