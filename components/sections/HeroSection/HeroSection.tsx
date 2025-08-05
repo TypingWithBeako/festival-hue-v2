@@ -74,7 +74,7 @@ export default function HeroSection() {
   }, [textRef]);
 
   return (
-    <div id="HeroSection" ref={siteRef}>
+    <section id="HeroSection" ref={siteRef}>
       <div className={styles["sliced-background"]}></div>
 
       <div>
@@ -126,6 +126,6 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

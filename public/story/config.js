@@ -16,8 +16,6 @@ var config = {
   theme: "dark",
   use3dTerrain: false, //set true for enabling 3D maps.
   auto: false,
-  footer:
-    'Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
   chapters: [
     {
       id: "slug-style-id",
@@ -95,7 +93,7 @@ var config = {
         zoom: 16.52,
         pitch: 8.01,
         bearing: 0.0,
-        speed: 0.8,
+        speed: 0.5,
         curve: 3,
       },
       mapAnimation: "flyTo",
@@ -117,6 +115,8 @@ var config = {
         zoom: 18.88,
         pitch: 0,
         bearing: 0,
+        speed: 0.5,
+        curve: 3,
       },
       mapAnimation: "flyTo",
       rotateAnimation: false,

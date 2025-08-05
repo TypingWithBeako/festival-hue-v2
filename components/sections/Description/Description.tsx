@@ -21,13 +21,13 @@ export default function Description() {
 
     gsap.from(dividerRef.current, {
       opacity: 0,
-      y: 25,
+      width: 0,
       duration: 1,
-      ease: "power4.out",
+      ease: "power1.out",
       scrollTrigger: {
         trigger: dividerRef.current,
         start: "top 100%",
-        end: "bottom 20%",
+        end: "bottom 80%",
         scrub: true,
       },
     });

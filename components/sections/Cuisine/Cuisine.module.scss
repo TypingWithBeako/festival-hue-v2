@@ -1,0 +1,15 @@
+.title {
+  position: relative;
+  display: inline-block; /* Ensure the width matches the text content */
+  text-align: center; /* Center the text */
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1.25rem; /* Adjust spacing below the heading */
+    width: 75%; /* Width of the separator */
+    height: 4px; /* Thickness of the separator */
+    background-color: orange; /* Use primary color */
+    left: 50%; /* Start at the center of the text */
+    transform: translateX(-50%); /* Adjust for centering */
+  }
+}
