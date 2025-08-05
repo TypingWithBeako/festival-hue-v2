@@ -75,3 +75,7 @@
 .slick-center {
   filter: brightness(1); /* Restore brightness for the center slide */
 }
+
+*::-webkit-scrollbar {
+  display: none;
+}
