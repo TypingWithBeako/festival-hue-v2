@@ -9,14 +9,6 @@
   text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Dark shadow for depth */
 }
 
-/* .background-gsap {
-  background-image: url(../public/imageFestival.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10%;
-} */
-
 .slick-dots {
   display: flex;
   justify-content: center;

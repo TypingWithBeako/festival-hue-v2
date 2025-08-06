@@ -1,0 +1,189 @@
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faInstagram,
+  faYoutube,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import {
+  faPhone,
+  faEnvelope,
+  faMapMarkerAlt,
+} from "@fortawesome/free-solid-svg-icons";
+
+gsap.registerPlugin(useGSAP);
+
+export default function Footer() {
+  const imageRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    // // Background expansion animation
+    // gsap.to(imageRef.current, {
+    //   ease: "power3.out",
+    //   width: "100vw",
+    //   height: "100%",
+    //   scrollTrigger: {
+    //     trigger: imageRef.current,
+    //     start: "top 80%", // Start earlier for smoother transition
+    //     end: "bottom 40%", // End when still visible
+    //     scrub: 1, // Smooth scrubbing
+    //   },
+    // });
+
+    // Content fade-in animation
+    gsap.from(contentRef.current, {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: contentRef.current,
+        start: "top 90%",
+        end: "bottom 90%",
+      },
+    });
+  });
+
+  return (
+    <section
+      id="Footer"
+      className="relative mt-20 flex justify-center items-end"
+    >
+      {/* GSAP Background Animation */}
+
+      {/* Footer Content */}
+      <div
+        ref={contentRef}
+        className="relative z-10 w-full bg-primary/90 backdrop-blur-sm text-white py-16"
+      >
+        <div className="container mx-auto px-4">
+          {/* Main Footer Content */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
+            {/* About Section */}
+            <div className="space-y-4">
+              <h3 className="text-2xl font-bold font-literata text-secondary">
+                Festival Huế 2025
+              </h3>
+              <p className="text-sm leading-relaxed w-[80%]">
+                Khám phá những câu chuyện ngàn năm, trải nghiệm không gian văn
+                hóa độc đáo và hòa mình vào sắc màu lễ hội bất tận tại cố đô
+                Huế.
+              </p>
+              <div className="flex space-x-4">
+                <a
+                  href="https://facebook.com/huefestival"
+                  target="_blank"
+                  className="text-white hover:text-secondary transition-colors duration-300"
+                >
+                  <FontAwesomeIcon icon={faFacebook} size="lg" />
+                </a>
+                <a
+                  href="https://instagram.com/huefestival"
+                  target="_blank"
+                  className="text-white hover:text-secondary transition-colors duration-300"
+                >
+                  <FontAwesomeIcon icon={faInstagram} size="lg" />
+                </a>
+                <a
+                  href="https://youtube.com/huefestival"
+                  target="_blank"
+                  className="text-white hover:text-secondary transition-colors duration-300"
+                >
+                  <FontAwesomeIcon icon={faYoutube} size="lg" />
+                </a>
+                <a
+                  href="https://twitter.com/huefestival"
+                  target="_blank"
+                  className="text-white hover:text-secondary transition-colors duration-300"
+                >
+                  <FontAwesomeIcon icon={faTwitter} size="lg" />
+                </a>
+              </div>
+            </div>
+
+            {/* Events Section */}
+            <div className="space-y-4">
+              <h4 className="text-lg font-bold font-literata">Sự kiện</h4>
+              <ul className="space-y-2">
+                <li>
+                  <a
+                    href="https://huefestival.com/events"
+                    target="_blank"
+                    className="hover:text-secondary transition-colors duration-300"
+                  >
+                    Lịch trình sự kiện
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://huefestival.com/tickets"
+                    target="_blank"
+                    className="hover:text-secondary transition-colors duration-300"
+                  >
+                    Đặt vé
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://huefestival.com/venues"
+                    target="_blank"
+                    className="hover:text-secondary transition-colors duration-300"
+                  >
+                    Địa điểm tổ chức
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://huefestival.com/gallery"
+                    target="_blank"
+                    className="hover:text-secondary transition-colors duration-300"
+                  >
+                    Thư viện ảnh
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Contact Info Section */}
+            <div className="space-y-4">
+              <h4 className="text-lg font-bold font-literata">Liên hệ</h4>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <FontAwesomeIcon
+                    icon={faMapMarkerAlt}
+                    className="text-secondary"
+                  />
+                  <span className="text-sm">Thừa Thiên Huế, Việt Nam</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <FontAwesomeIcon icon={faPhone} className="text-secondary" />
+                  <span className="text-sm">+84 234 3828 282</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <FontAwesomeIcon
+                    icon={faEnvelope}
+                    className="text-secondary"
+                  />
+                  <span className="text-sm">info@huefestival.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Section */}
+          <div className="border-t border-white/20 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <p className="text-sm text-center md:text-left">
+                © 2025 Festival Huế. Tất cả các quyền được bảo lưu.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

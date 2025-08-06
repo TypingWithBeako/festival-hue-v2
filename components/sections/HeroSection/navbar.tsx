@@ -70,9 +70,7 @@ export const Logo = () => {
                 </p>
                 <p className="italic">
                   Nhấn nút{" "}
-                  <span className="font-bold text-secondary">
-                    "Tìm hiểu thêm"
-                  </span>{" "}
+                  <span className="font-bold text-secondary">"Tiếp tục"</span>{" "}
                   để ghé thăm trang chủ chính thức của Festival Huế{" "}
                   <span className="font-bold">(huefestival.com)</span>
                 </p>
@@ -88,7 +86,7 @@ export const Logo = () => {
                     onClose();
                   }}
                 >
-                  Tìm hiểu thêm
+                  Tiếp tục
                 </Button>
               </ModalFooter>
             </>

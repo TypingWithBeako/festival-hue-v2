@@ -4,6 +4,7 @@ import Description from "@/components/sections/Description/Description";
 import Village from "@/components/sections/Village/Village";
 import Cuisine from "@/components/sections/Cuisine/Cuisine";
 import Art from "./../components/sections/Art/Art";
+import Footer from "./../components/sections/Footer/Footer";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Village />
       <Cuisine />
       <Art />
+      <Footer />
     </>
   );
 }
