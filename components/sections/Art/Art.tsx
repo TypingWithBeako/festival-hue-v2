@@ -31,7 +31,7 @@ const musicIcon = {
   icon: <FontAwesomeIcon icon={faMusic} />,
   iconStyle: { background: "rgb(33, 150, 243)", color: "#fff" },
 };
-const danceIcon = {
+const microphoneIcon = {
   icon: <FontAwesomeIcon icon={faMicrophone} />,
   iconStyle: { background: "rgb(233, 30, 99)", color: "#fff" },
 };
@@ -55,7 +55,7 @@ function Art() {
       image: NhaNhacCungDinh,
     },
     {
-      icon: musicIcon,
+      icon: microphoneIcon,
       date: "Dân ca Cố đô",
       title: "Ca Huế",
       subtitle: "Lời ca sâu lắng trên sông Hương",
@@ -63,7 +63,7 @@ function Art() {
       image: CaHue,
     },
     {
-      icon: danceIcon,
+      icon: stageIcon,
       date: "Nghệ thuật sân khấu",
       title: "Múa Cung đình",
       subtitle: "Vũ điệu của vương triều",
