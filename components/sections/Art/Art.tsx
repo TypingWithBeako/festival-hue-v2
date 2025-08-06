@@ -121,7 +121,7 @@ function Art() {
           return (
             <VerticalTimelineElement
               key={i}
-              className="vertical-timeline-element--work"
+              className="vertical-timeline-element--work overflow-y-hidden"
               date={t.date}
               {...t.icon}
             >
