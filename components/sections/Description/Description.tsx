@@ -61,7 +61,7 @@ export default function Description() {
             <h2 className="text-center text-3xl md:text-4xl font-bold md:text-left font-literata text-primary">
               Về Festival Huế
             </h2>
-            <p className="mt-8 text-lg leading-relaxed text-left text-balance">
+            <p className="mt-8 text-lg leading-relaxed text-left text-balance ">
               Festival Huế là một lễ hội văn hóa nghệ thuật và du lịch quốc tế
               đặc sắc của Việt Nam, ra đời từ năm 2000 sau thành công của
               Festival Việt - Pháp 1992. Lễ hội không chỉ tôn vinh giá trị di

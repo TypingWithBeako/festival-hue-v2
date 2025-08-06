@@ -49,7 +49,7 @@ export default function Cuisine() {
     <section id="CuisineSection" className="bg-white">
       <div
         id="Cuisine"
-        className="container flex flex-col justify-center pt-20"
+        className="container flex flex-col justify-center pt-24"
       >
         <h1
           ref={titleRef}
@@ -59,7 +59,7 @@ export default function Cuisine() {
         </h1>
         <p
           ref={descriptionRef}
-          className="text-xl py-8 self-center text-left md:text-center font-literata text-balance"
+          className="text-xl py-8 self-center text-left md:text-center font-literata text-balance px-4 md:px-0"
         >
           Hãy cùng tôi đi một vòng Huế, không phải để thăm các cung điện hay
           lăng tẩm, mà để khám phá hương vị đặc trưng, để mỗi món ăn không chỉ

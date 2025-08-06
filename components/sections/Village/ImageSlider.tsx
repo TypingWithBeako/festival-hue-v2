@@ -88,7 +88,7 @@ function ImageSlider() {
         <h3 className="text-3xl py-8 font-bold font-literata text-primary">
           {titles[activeSlide]}
         </h3>
-        <p className="text-xl font-literata text-balance text-left md:text-center pl-4 md:pl-0">
+        <p className="text-xl font-literata text-balance text-left md:text-center px-4 md:px-0">
           {descriptions[activeSlide]}
         </p>
       </div>

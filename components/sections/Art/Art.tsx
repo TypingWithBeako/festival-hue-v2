@@ -79,8 +79,8 @@ function Art() {
   ];
 
   return (
-    <section id="ArtSection" className="container pt-20">
-      <div id="Art" className="flex justify-center mb-20 ">
+    <section id="ArtSection" className="container ">
+      <div id="Art" className="flex justify-center mb-20 pt-20">
         <h1
           className={`text-primary font-bold font-literata text-5xl text-center ${styles.title}`}
         >
