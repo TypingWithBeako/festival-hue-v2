@@ -107,7 +107,7 @@ function Art() {
           Nghệ thuật
         </h1>
       </div>
-      <VerticalTimeline>
+      <VerticalTimeline className="overflow-y-hidden">
         {timeline.map((t, i) => {
           // const contentStyle =
           //   i === 0
@@ -121,7 +121,7 @@ function Art() {
           return (
             <VerticalTimelineElement
               key={i}
-              className="vertical-timeline-element--work overflow-y-hidden"
+              className="vertical-timeline-element--work"
               date={t.date}
               {...t.icon}
             >
