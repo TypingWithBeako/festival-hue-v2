@@ -70,7 +70,7 @@ export default function NavigationBar() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          console.log(entry.target.id);
+          // console.log(entry.target.id);
           if (entry.isIntersecting) {
             setActiveSection("#" + entry.target.id);
           }

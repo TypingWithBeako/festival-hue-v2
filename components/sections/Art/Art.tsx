@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./Art.module.scss";
 import {
   VerticalTimeline,
@@ -21,6 +21,11 @@ import CaHue from "@/public/Art/cahue2.jpg";
 import MuaCungDinh from "@/public/Art/gin giu.jpg";
 import TuongHue from "@/public/Art/tuong-hue.jpg";
 import Image from "next/image";
+
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { title } from "process";
+gsap.registerPlugin(useGSAP);
 
 const musicIcon = {
   icon: <FontAwesomeIcon icon={faMusic} />,
@@ -78,9 +83,24 @@ function Art() {
     },
   ];
 
+  const titleRef = useRef(null);
+  useGSAP(() => {
+    gsap.from(titleRef.current, {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: titleRef.current,
+        start: "top 80%",
+        end: "bottom 80%",
+      },
+    });
+  });
+
   return (
     <section id="ArtSection" className="container ">
-      <div id="Art" className="flex justify-center mb-20 pt-20">
+      <div ref={titleRef} id="Art" className="flex justify-center mb-20 pt-20">
         <h1
           className={`text-primary font-bold font-literata text-5xl text-center ${styles.title}`}
         >
