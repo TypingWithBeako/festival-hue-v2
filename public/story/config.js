@@ -119,7 +119,7 @@ var config = {
       description:
         "Sau đó, chúng ta sẽ ghé qua quán Bà Đỏ tại 8 Nguyễn Bỉnh Khiêm để thưởng thức bộ ba huyền thoại của ẩm thực Huế: bánh bèo, bánh nậm, bánh lọc. Mỗi loại bánh lại có một nét đặc trưng riêng. Bánh bèo nhỏ nhắn, mềm mịn, ăn cùng với mắm ớt và tôm cháy. Bánh nậm dẻo, được gói trong lá dong, mang vị ngọt nhẹ của tôm thịt. Bánh lọc trong veo, dai dai, ẩn bên trong là tôm và thịt ba chỉ. Khi ăn, ta cảm nhận được vị mặn ngọt, vị cay the, và cả hương thơm đặc trưng của lá dong.",
       location: {
-        center: [107.58945369064085, 16.482384423043978],
+        center: [107.58926851140365, 16.482258880286995],
         zoom: 16.52,
         pitch: 8.01,
         bearing: 0.0,
