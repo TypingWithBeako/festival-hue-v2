@@ -184,10 +184,19 @@ export default function Footer() {
 
           {/* Bottom Section */}
           <div className="border-t border-white/20 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-              <p className="text-sm text-center md:text-left">
-                © 2025 Festival Huế. Tất cả các quyền được bảo lưu.
+            <div className="flex flex-col justify-start items-start space-y-6 md:space-y-0">
+              <p className="text-md text-center md:text-left">
+                © 2025 Festival Huế. Tất cả các quyền được bảo lưu. <br />
               </p>
+
+              <div className="flex flex-col pt-2">
+                <p className="text-sm text-left">Nhóm tác giả:</p>
+                <ul className="text-sm text-left list-disc ml-4 marker:text-secondary">
+                  <li>Nguyễn Thái Tuấn</li>
+                  <li>Nguyễn Nhất Vũ</li>
+                  <li>Mai Thị Thắm</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

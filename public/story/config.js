@@ -18,6 +18,36 @@ var config = {
   auto: false,
   chapters: [
     {
+      id: "Hue",
+      alignment: "fully",
+      hidden: false,
+      title: "Khám phá Huế - Kinh đô Ẩm thực",
+      description:
+        "Hãy cùng tôi đi một vòng Huế, không phải để thăm các cung điện hay lăng tẩm, mà để khám phá hương vị đặc trưng, để mỗi món ăn không chỉ là một bữa tiệc vị giác, mà còn là một câu chuyện về văn hóa và con người nơi đây.",
+      location: {
+        center: [107.58146994038683, 16.475428439913014],
+        zoom: 10.84,
+        pitch: 8.01,
+        bearing: 0,
+      },
+      mapAnimation: "flyTo",
+      rotateAnimation: false,
+      callback: "",
+      onChapterEnter: [
+        // {
+        //     layer: 'layer-name',
+        //     opacity: 1,
+        //     duration: 5000
+        // }
+      ],
+      onChapterExit: [
+        // {
+        //     layer: 'layer-name',
+        //     opacity: 0
+        // }
+      ],
+    },
+    {
       id: "slug-style-id",
       alignment: "left",
       hidden: false,
@@ -30,8 +60,8 @@ var config = {
         zoom: 16.84,
         pitch: 8.01,
         bearing: 0,
-        speed: 0.5,
-        curve: 3,
+        speed: 0.6,
+        curve: 1.5,
       },
       mapAnimation: "flyTo",
       rotateAnimation: false,
@@ -65,7 +95,7 @@ var config = {
         pitch: 8.01,
         bearing: 0,
         speed: 0.5,
-        curve: 3,
+        curve: 1,
         // flyTo additional controls-
         // These options control the flight curve, making it move
         // slowly and zoom out almost completely before starting
@@ -94,7 +124,7 @@ var config = {
         pitch: 8.01,
         bearing: 0.0,
         speed: 0.5,
-        curve: 3,
+        curve: 1.5,
       },
       mapAnimation: "flyTo",
       rotateAnimation: false,
@@ -104,7 +134,7 @@ var config = {
     },
     {
       id: "fourth-chapter",
-      alignment: "fully",
+      alignment: "right",
       hidden: false,
       title: "4. Chè Hẻm - 1 Kiệt 29 Hùng Vương",
       image: "./assets/Che_Hue_ThanhToan.jpg",
@@ -112,11 +142,11 @@ var config = {
         "Cuối cùng, để kết thúc hành trình, hãy thưởng thức một chén chè Huế. Bạn có thể đến chè Hẻm nổi tiếng tại 1 Kiệt 29 Hùng Vương. Đây là nơi hội tụ của hàng chục loại chè khác nhau, từ chè bắp, chè bột lọc heo quay, chè khoai môn, đến chè hạt sen. Mỗi chén chè đều được nấu công phu, mang vị ngọt dịu dàng, thanh mát, là một cái kết hoàn hảo cho chuyến du hành ẩm thực đầy hương sắc.",
       location: {
         center: [107.59357065260401, 16.46507164576554],
-        zoom: 18.88,
+        zoom: 15.88,
         pitch: 0,
         bearing: 0,
         speed: 0.5,
-        curve: 3,
+        curve: 2,
       },
       mapAnimation: "flyTo",
       rotateAnimation: false,
