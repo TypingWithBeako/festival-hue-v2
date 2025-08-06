@@ -17,36 +17,39 @@ import {
 gsap.registerPlugin(useGSAP);
 
 export default function Footer() {
-  const imageRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    // // Background expansion animation
-    // gsap.to(imageRef.current, {
-    //   ease: "power3.out",
-    //   width: "100vw",
-    //   height: "100%",
-    //   scrollTrigger: {
-    //     trigger: imageRef.current,
-    //     start: "top 80%", // Start earlier for smoother transition
-    //     end: "bottom 40%", // End when still visible
-    //     scrub: 1, // Smooth scrubbing
-    //   },
-    // });
-
-    // Content fade-in animation
-    gsap.from(contentRef.current, {
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: contentRef.current,
-        start: "top 90%",
-        end: "bottom 90%",
-      },
-    });
+    if (window.innerWidth >= 768) {
+      gsap.from(contentRef.current, {
+        opacity: 0,
+        y: 0,
+        width: "50%",
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: contentRef.current,
+          start: "top 100%",
+          end: "bottom 100%",
+          scrub: true,
+        },
+      });
+    }
   });
+  // // Background expansion animation
+  // gsap.to(imageRef.current, {
+  //   ease: "power3.out",
+  //   width: "100vw",
+  //   height: "100%",
+  //   scrollTrigger: {
+  //     trigger: imageRef.current,
+  //     start: "top 80%", // Start earlier for smoother transition
+  //     end: "bottom 40%", // End when still visible
+  //     scrub: 1, // Smooth scrubbing
+  //   },
+  // });
+
+  // Content fade-in animation
 
   return (
     <section
@@ -62,7 +65,7 @@ export default function Footer() {
       >
         <div className="container mx-auto px-4">
           {/* Main Footer Content */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {/* About Section */}
             <div className="space-y-4">
               <h3 className="text-2xl font-bold font-literata text-secondary">
@@ -111,7 +114,7 @@ export default function Footer() {
               <ul className="space-y-2">
                 <li>
                   <a
-                    href="https://huefestival.com/events"
+                    href="https://huefestival.com/Festival-Hue-2024/Festival-Hue"
                     target="_blank"
                     className="hover:text-secondary transition-colors duration-300"
                   >
@@ -120,16 +123,16 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://huefestival.com/tickets"
+                    href="https://huefestival.com/Tai-tro/Thu-ngo/cid/60/pid/1841/tid/Thu-ngo"
                     target="_blank"
                     className="hover:text-secondary transition-colors duration-300"
                   >
-                    Đặt vé
+                    Thư ngỏ
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://huefestival.com/venues"
+                    href="https://huefestival.com/Festival-Hue/Ban-do-dia-diem-chuong-trinh"
                     target="_blank"
                     className="hover:text-secondary transition-colors duration-300"
                   >
@@ -138,7 +141,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://huefestival.com/gallery"
+                    href="https://huefestival.com/Thu-vien/Hinh-anh"
                     target="_blank"
                     className="hover:text-secondary transition-colors duration-300"
                   >
@@ -157,18 +160,23 @@ export default function Footer() {
                     icon={faMapMarkerAlt}
                     className="text-secondary"
                   />
-                  <span className="text-sm">Thừa Thiên Huế, Việt Nam</span>
+                  <span className="text-sm">
+                    Tam Tòa, 33 Tống Duy Tân, phường Phú Xuân, thành phố Huế,
+                    Việt Nam
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <FontAwesomeIcon icon={faPhone} className="text-secondary" />
-                  <span className="text-sm">+84 234 3828 282</span>
+                  <span className="text-sm">+84 234.3523237</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <FontAwesomeIcon
                     icon={faEnvelope}
                     className="text-secondary"
                   />
-                  <span className="text-sm">info@huefestival.com</span>
+                  <span className="text-sm">
+                    huefestival.official@gmail.com - info@huefestival.com
+                  </span>
                 </div>
               </div>
             </div>
