@@ -11,29 +11,91 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   Link,
-  Button,
   Tooltip,
 } from "@heroui/react";
+
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Button,
+  useDisclosure,
+} from "@heroui/react";
+
 import Image from "next/image";
 
 export const Logo = () => {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
   return (
-    <Tooltip
-      color="secondary"
-      placement="right"
-      content="Biểu tượng Festival Huế"
-      showArrow={true}
-    >
-      <a href="https://huefestival.com/" target="_blank">
-        <Image
-          src="/Logo.png"
-          alt="Festival Hue 2025 Logo"
-          width={65}
-          height={65}
-          className="hover:opacity-75 cursor-pointer"
-        ></Image>
-      </a>
-    </Tooltip>
+    <>
+      <Tooltip
+        color="secondary"
+        placement="right"
+        content="Biểu tượng Festival Huế"
+        showArrow={true}
+      >
+        <a onClick={onOpen} className="cursor-pointer">
+          <Image
+            src="/Logo.png"
+            alt="Festival Hue 2025 Logo"
+            width={65}
+            height={65}
+            className="hover:opacity-75 cursor-pointer"
+          />
+        </a>
+      </Tooltip>
+
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1 text-primary text-xl">
+                Festival Huế 2025
+              </ModalHeader>
+              <ModalBody>
+                <p>
+                  Festival Huế 2025 là sự kiện văn hóa lớn nhất của xứ Huế, nơi
+                  hội tụ tinh hoa nghệ thuật truyền thống và hiện đại.
+                </p>
+                <p>
+                  Khám phá những câu chuyện ngàn năm, trải nghiệm không gian văn
+                  hóa độc đáo và hòa mình vào sắc màu lễ hội bất tận!
+                </p>
+                <p>
+                  Tham gia cùng chúng tôi để khám phá vẻ đẹp của cố đô Huế qua
+                  những hoạt động nghệ thuật, ẩm thực và làng nghề truyền thống.
+                </p>
+                <p className="italic">
+                  Nhấn nút{" "}
+                  <span className="font-bold text-secondary">
+                    "Tìm hiểu thêm"
+                  </span>{" "}
+                  để ghé thăm trang chủ chính thức của Festival Huế{" "}
+                  <span className="font-bold">(huefestival.com)</span>
+                </p>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="danger" variant="light" onPress={onClose}>
+                  Đóng
+                </Button>
+                <Button
+                  color="secondary"
+                  onPress={() => {
+                    window.open("https://huefestival.com/", "_blank");
+                    onClose();
+                  }}
+                >
+                  Tìm hiểu thêm
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
+    </>
   );
 };
 
