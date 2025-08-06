@@ -46,8 +46,11 @@ export default function Cuisine() {
     });
   });
   return (
-    <section id="Cuisine" className="bg-white">
-      <div className="container flex flex-col justify-center pt-20">
+    <section id="CuisineSection" className="bg-white">
+      <div
+        id="Cuisine"
+        className="container flex flex-col justify-center pt-20"
+      >
         <h1
           ref={titleRef}
           className={`text-primary self-center font-bold font-literata text-5xl text-center mb-8 ${styles.title}`}

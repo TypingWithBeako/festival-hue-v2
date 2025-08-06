@@ -48,7 +48,8 @@ export default function Description() {
   }, []);
 
   return (
-    <section id="Description" className="bg-white py-20 font-literata">
+    <section id="DescriptionSection" className="bg-white py-20 font-literata">
+      <div id="Description" className="pt-28"></div>
       <div className="container mx-auto flex flex-col gap-y-12 px-4 justify-between">
         {/* Section 1: Về Festival Huế 2025 */}
         <div

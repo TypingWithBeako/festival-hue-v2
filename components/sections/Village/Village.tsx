@@ -50,9 +50,9 @@ export default function Village() {
   });
 
   return (
-    <section className="w-full" id="Village">
+    <section className="w-full" id="VillageSection">
       <div className={`${styles.image}`}></div>
-      <div className="flex justify-center pt-20  ">
+      <div id="Village" className="flex justify-center pt-20  ">
         <h1
           ref={titleRef}
           className={`text-white font-bold font-literata text-5xl text-center ${styles.title}`}
