@@ -8,11 +8,9 @@ import "react-vertical-timeline-component/style.min.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faBriefcase,
   faMasksTheater,
   faMicrophone,
   faMusic,
-  faSchool,
   faStar,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -24,7 +22,7 @@ import Image from "next/image";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { title } from "process";
+
 gsap.registerPlugin(useGSAP);
 
 const musicIcon = {

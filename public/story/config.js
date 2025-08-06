@@ -154,5 +154,26 @@ var config = {
       onChapterEnter: [],
       onChapterExit: [],
     },
+    {
+      id: "farewell-chapter",
+      alignment: "fully",
+      hidden: false,
+      title: "Tạm biệt Huế - Chuyển sang Nghệ thuật",
+      description:
+        "Chuyến hành trình khám phá ẩm thực Huế đã kết thúc, nhưng câu chuyện về cố đô vẫn còn tiếp tục. Hãy cùng khám phá thêm về nghệ thuật truyền thống Huế - nơi âm nhạc, múa hát và sân khấu hòa quyện tạo nên bản sắc văn hóa độc đáo của vùng đất này.",
+      location: {
+        center: [107.58146994038683, 16.475428439913014],
+        zoom: 11.5,
+        pitch: 0,
+        bearing: 0,
+        speed: 0.8,
+        curve: 2,
+      },
+      mapAnimation: "flyTo",
+      rotateAnimation: false,
+      callback: "",
+      onChapterEnter: [],
+      onChapterExit: [],
+    },
   ],
 };
