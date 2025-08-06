@@ -64,7 +64,7 @@ export default function Cuisine() {
           người nơi đây.
         </p>
       </div>
-      <div className="container h-[90vh] ">
+      <div className="container h-[90vh] mb-20">
         <iframe
           ref={mapRef}
           src="/story/index.html"
