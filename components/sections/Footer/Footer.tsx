@@ -179,23 +179,30 @@ export default function Footer() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <FontAwesomeIcon icon={faPhone} className="text-secondary" />
-                  <span className="text-sm">+84 234.3523237</span>
+                  <span className="text-sm">
+                    <a
+                      className="underline hover:text-secondary transition-colors duration-300 "
+                      href="tel:+842343523237"
+                    >
+                      +84 234.3523237
+                    </a>
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <FontAwesomeIcon
                     icon={faEnvelope}
-                    className="text-secondary"
+                    className="text-secondary "
                   />
                   <span className="text-sm">
                     <a
-                      className="text-white underline"
+                      className="underline hover:text-secondary transition-colors duration-300 "
                       href="mailto:huefestival.official@gmail.com"
                     >
                       huefestival.official@gmail.com
                     </a>{" "}
                     -{" "}
                     <a
-                      className="text-white underline"
+                      className="underline hover:text-secondary transition-colors duration-300 "
                       href="mailto:info@huefestival.com"
                     >
                       info@huefestival.com
