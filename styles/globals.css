@@ -48,15 +48,11 @@
   .image-slider-image {
     padding: 0 5px;
   }
-  .slick-arrow {
-    display: none !important;
-  }
 }
 
 .slick-slide img {
   display: inline-block !important;
   outline: none;
-  border: 4px solid white;
 }
 
 .image-slider-image img {

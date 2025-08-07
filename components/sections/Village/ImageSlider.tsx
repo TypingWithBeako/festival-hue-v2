@@ -38,9 +38,10 @@ function ImageSlider() {
     centerPadding: "10px",
     centerMode: true,
     speed: 500,
-    autoplay: true,
-    autoplaySpeed: 15000,
+    autoplay: false,
     dots: true,
+    arrows: false,
+    focusOnSelect: true,
     afterChange: (current: any) => {
       setFade(true); // Trigger fade-out
       setTimeout(() => {
