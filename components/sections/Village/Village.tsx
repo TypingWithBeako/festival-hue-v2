@@ -63,7 +63,7 @@ export default function Village() {
 
       <p
         ref={descriptionRef}
-        className="text-white container font-literata text-lg md:text-2xl  text-left pl-4 md:ml-auto md:text-center pt-12 "
+        className="text-white container font-literata text-lg md:text-2xl text-pretty text-left pl-4 md:ml-auto md:text-center pt-12 "
       >
         Khi nhắc đến Huế – mảnh đất Cố đô thơ mộng – ta không chỉ nhớ đến sông
         Hương, núi Ngự, hay những tà áo dài tím thướt tha, mà còn không thể

@@ -11,6 +11,8 @@ import {
   faMasksTheater,
   faMicrophone,
   faMusic,
+  faPaintBrush,
+  faScrewdriverWrench,
   faStar,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -18,6 +20,8 @@ import NhaNhacCungDinh from "@/public/Art/cac_nghe_si_dien_vien_nhac_cong_say_me
 import CaHue from "@/public/Art/cahue2.jpg";
 import MuaCungDinh from "@/public/Art/gin giu.jpg";
 import TuongHue from "@/public/Art/tuong-hue.jpg";
+import DieuKhac from "@/public/Art/Suc song cua lang nghe 2_result.webp";
+import PhapLam from "@/public/Art/co-vat-phap-lam-hue.jpg";
 import Image from "next/image";
 
 import gsap from "gsap";
@@ -36,6 +40,14 @@ const microphoneIcon = {
 const stageIcon = {
   icon: <FontAwesomeIcon icon={faMasksTheater} />,
   iconStyle: { background: "rgb(16, 204, 82)", color: "#fff" },
+};
+const woodIcon = {
+  icon: <FontAwesomeIcon icon={faScrewdriverWrench} />,
+  iconStyle: { background: "#8B5C2A", color: "#fff" },
+};
+const enamelIcon = {
+  icon: <FontAwesomeIcon icon={faPaintBrush} />,
+  iconStyle: { background: "#FFD700", color: "#fff" },
 };
 const starIcon = {
   icon: <FontAwesomeIcon icon={faStar} />,
@@ -76,6 +88,24 @@ function Art() {
       desc: "Loại hình sân khấu cổ truyền, mang tính ước lệ cao. Giàu giá trị giáo dục, là một phần quan trọng để bảo tồn văn hóa qua các kỳ Festival.",
       image: TuongHue,
     },
+
+    {
+      icon: woodIcon,
+      date: "Nghệ thuật thủ công",
+      title: "Điêu khắc Gỗ",
+      subtitle: "Sự tinh xảo của nghệ nhân",
+      desc: "Những tác phẩm chạm khắc tinh xảo trên gỗ, xuất hiện trong các công trình kiến trúc cung đình và dân gian. Thể hiện sự tài hoa và kiên nhẫn của người nghệ nhân Huế.",
+      image: DieuKhac,
+    },
+    {
+      icon: enamelIcon,
+      date: "Nghệ thuật hoàng gia",
+      title: "Nghệ thuật Pháp Lam",
+      subtitle: "Trang trí trên kim loại",
+      desc: "Một loại hình nghệ thuật độc đáo của triều Nguyễn, với kỹ thuật tráng men trên đồng. Màu sắc ráng rỡ, bền đẹp, thường được dùng để trang trí trong cung điện.",
+      image: PhapLam,
+    },
+
     {
       icon: starIcon,
     },
@@ -125,23 +155,23 @@ function Art() {
             >
               {t.title ? (
                 <>
-                  <h3 className="vertical-timeline-element-title text-primary font-bold text-xl font-literata">
+                  <h3 className="vertical-timeline-element-title text-primary font-bold text-xl font-literata text-pretty">
                     {t.title}
                   </h3>
 
                   {t.subtitle && (
-                    <h4 className="vertical-timeline-element-subtitle italic font-literata">
+                    <h4 className="vertical-timeline-element-subtitle text-pretty italic font-literata">
                       {t.subtitle}
                     </h4>
                   )}
-                  {t.desc && <p>{t.desc}</p>}
+                  {t.desc && <p className="text-pretty">{t.desc}</p>}
 
                   {t.image && (
                     <div className="mt-4">
                       <Image
                         src={t.image}
                         alt={t.title}
-                        className="rounded-lg shadow-lg w-full h-auto transition-transform duration-300 hover:scale-102"
+                        className="rounded-lg shadow-lg text-pretty w-full h-auto transition-transform duration-300 hover:scale-102"
                       />
                     </div>
                   )}

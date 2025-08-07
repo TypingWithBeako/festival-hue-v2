@@ -172,7 +172,7 @@ export default function Footer() {
                     icon={faMapMarkerAlt}
                     className="text-secondary"
                   />
-                  <span className="text-sm">
+                  <span className="text-sm text-pretty">
                     Tam Tòa, 33 Tống Duy Tân, phường Phú Xuân, thành phố Huế,
                     Việt Nam
                   </span>

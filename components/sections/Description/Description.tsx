@@ -1,12 +1,14 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import Anh1 from "../../../public/Anh-1.jpeg";
 import Anh2 from "../../../public/imageFestival.webp";
 import { useGSAP } from "@gsap/react";
+
+import styles from "./Description.module.scss";
 
 // Register GSAP ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -61,7 +63,9 @@ export default function Description() {
             <h2 className="text-center text-3xl md:text-4xl font-bold md:text-left font-literata text-primary">
               Về Festival Huế
             </h2>
-            <p className="mt-8 text-lg leading-relaxed text-left text-balance ">
+            <p
+              className={`mt-8 text-xl leading-relaxed text-left text-pretty ${styles.dropCap}`}
+            >
               Festival Huế là một lễ hội văn hóa nghệ thuật và du lịch quốc tế
               đặc sắc của Việt Nam, ra đời từ năm 2000 sau thành công của
               Festival Việt - Pháp 1992. Lễ hội không chỉ tôn vinh giá trị di
@@ -94,11 +98,11 @@ export default function Description() {
             <h2 className="text-balance text-center text-3xl md:text-4xl font-bold md:text-left font-literata text-primary">
               Festival Huế 2025 – Lễ hội bốn mùa –
             </h2>
-            <p className="mt-8 text-lg leading-relaxed text-left text-pretty">
+            <p className="mt-8 text-xl leading-relaxed text-left text-pretty">
               Festival Huế 2025 sẽ diễn ra xuyên suốt năm với định hướng
               Festival bốn mùa, bao gồm:
             </p>
-            <ul className="mt-4 list-disc pl-8 text-left text-lg leading-relaxed">
+            <ul className="mt-4 list-disc pl-8 text-left text-lg leading-relaxed text-pretty">
               <li>
                 Lễ hội mùa Xuân – <b>"Xuân Cố đô"</b>{" "}
               </li>
