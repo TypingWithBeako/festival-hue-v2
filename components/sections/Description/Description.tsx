@@ -94,7 +94,7 @@ export default function Description() {
             <h2 className="text-balance text-center text-3xl md:text-4xl font-bold md:text-left font-literata text-primary">
               Festival Huế 2025 – Lễ hội bốn mùa –
             </h2>
-            <p className="mt-8 text-lg leading-relaxed text-left">
+            <p className="mt-8 text-lg leading-relaxed text-left text-pretty">
               Festival Huế 2025 sẽ diễn ra xuyên suốt năm với định hướng
               Festival bốn mùa, bao gồm:
             </p>
