@@ -48,6 +48,9 @@
   .image-slider-image {
     padding: 0 5px;
   }
+  .slick-arrow {
+    display: none !important;
+  }
 }
 
 .slick-slide img {
