@@ -77,3 +77,8 @@
 *::-webkit-scrollbar {
   display: none;
 }
+
+.vertical-timeline-element-date {
+  font-weight: bold !important;
+  color: #cd7f32;
+}
