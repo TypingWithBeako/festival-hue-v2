@@ -53,6 +53,7 @@
 .slick-slide img {
   display: inline-block !important;
   outline: none;
+  border: 4px solid white;
 }
 
 .image-slider-image img {
