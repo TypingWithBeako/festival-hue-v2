@@ -56,8 +56,6 @@ export default function Footer() {
       id="Footer"
       className="relative mt-20 flex justify-center items-end"
     >
-      {/* GSAP Background Animation */}
-
       {/* Footer Content */}
       <div
         ref={contentRef}
@@ -110,7 +108,7 @@ export default function Footer() {
 
             {/* Events Section */}
             <div className="space-y-4">
-              <h4 className="text-lg font-bold font-literata">Sự kiện</h4>
+              <h4 className="text-lg font-bold font-literata">Liên kết</h4>
               <ul className="space-y-2">
                 <li>
                   <a

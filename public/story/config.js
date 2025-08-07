@@ -158,7 +158,7 @@ var config = {
       id: "farewell-chapter",
       alignment: "fully",
       hidden: false,
-      title: "Tạm biệt Huế - Chuyển sang Nghệ thuật",
+      title: "Tạm biệt Huế...?",
       description:
         "Chuyến hành trình khám phá ẩm thực Huế đã kết thúc, nhưng câu chuyện về cố đô vẫn còn tiếp tục. Hãy cùng khám phá thêm về nghệ thuật truyền thống Huế - nơi âm nhạc, múa hát và sân khấu hòa quyện tạo nên bản sắc văn hóa độc đáo của vùng đất này.",
       location: {

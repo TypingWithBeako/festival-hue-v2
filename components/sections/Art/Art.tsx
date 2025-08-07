@@ -125,12 +125,12 @@ function Art() {
             >
               {t.title ? (
                 <>
-                  <h3 className="vertical-timeline-element-title text-primary font-bold text-xl">
+                  <h3 className="vertical-timeline-element-title text-primary font-bold text-xl font-literata">
                     {t.title}
                   </h3>
 
                   {t.subtitle && (
-                    <h4 className="vertical-timeline-element-subtitle italic">
+                    <h4 className="vertical-timeline-element-subtitle italic font-literata">
                       {t.subtitle}
                     </h4>
                   )}
