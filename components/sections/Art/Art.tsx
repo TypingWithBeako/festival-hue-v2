@@ -1,10 +1,15 @@
+"use client";
+
 import React, { useRef } from "react";
 import styles from "./Art.module.scss";
+import { useEffect } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -23,11 +28,6 @@ import TuongHue from "@/public/Art/tuong-hue.jpg";
 import DieuKhac from "@/public/Art/Suc song cua lang nghe 2_result.webp";
 import PhapLam from "@/public/Art/co-vat-phap-lam-hue.jpg";
 import Image from "next/image";
-
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-
-gsap.registerPlugin(useGSAP);
 
 const musicIcon = {
   icon: <FontAwesomeIcon icon={faMusic} />,
@@ -55,6 +55,12 @@ const starIcon = {
 };
 
 function Art() {
+  useEffect(() => {
+    AOS.init({
+      once: false,
+    });
+  }, []);
+
   const timeline = [
     {
       icon: musicIcon,
@@ -111,31 +117,18 @@ function Art() {
     },
   ];
 
-  const titleRef = useRef(null);
-  useGSAP(() => {
-    gsap.from(titleRef.current, {
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      ease: "power4.out",
-      scrollTrigger: {
-        trigger: titleRef.current,
-        start: "top 80%",
-        end: "bottom 80%",
-      },
-    });
-  });
-
   return (
-    <section id="ArtSection" className="container ">
-      <div ref={titleRef} id="Art" className="flex justify-center mb-20 pt-20">
+    <section id="ArtSection" className="container">
+      <div id="Art" className="flex justify-center mb-20 pt-20">
         <h1
+          data-aos="zoom-in"
+          data-aos-duration="500"
           className={`text-primary font-bold font-literata text-5xl text-center ${styles.title}`}
         >
           Nghệ thuật
         </h1>
       </div>
-      <VerticalTimeline className="overflow-y-hidden">
+      <VerticalTimeline animate={false} className="overflow-y-hidden">
         {timeline.map((t, i) => {
           // const contentStyle =
           //   i === 0
@@ -147,37 +140,43 @@ function Art() {
           //     : undefined;
 
           return (
-            <VerticalTimelineElement
+            <div
               key={i}
-              className="vertical-timeline-element--work"
-              date={t.date}
-              {...t.icon}
+              className="mb-16"
+              data-aos="fade-up"
+              data-aos-duration="800"
             >
-              {t.title ? (
-                <>
-                  <h3 className="vertical-timeline-element-title text-primary font-bold text-xl font-literata text-pretty">
-                    {t.title}
-                  </h3>
-
-                  {t.subtitle && (
-                    <h4 className="vertical-timeline-element-subtitle text-pretty italic font-literata">
-                      {t.subtitle}
-                    </h4>
-                  )}
-                  {t.desc && <p className="text-pretty">{t.desc}</p>}
-
-                  {t.image && (
-                    <div className="mt-4">
-                      <Image
-                        src={t.image}
-                        alt={t.title}
-                        className="rounded-lg shadow-lg text-pretty w-full h-auto transition-transform duration-300 hover:scale-102"
-                      />
-                    </div>
-                  )}
-                </>
-              ) : undefined}
-            </VerticalTimelineElement>
+              <VerticalTimelineElement
+                key={i}
+                position={i % 2 === 0 ? "left" : "right"} // <-- alternate sides
+                className="vertical-timeline-element--work"
+                date={t.date}
+                {...t.icon}
+              >
+                {t.title ? (
+                  <>
+                    <h3 className="vertical-timeline-element-title text-primary font-bold text-xl font-literata text-pretty">
+                      {t.title}
+                    </h3>
+                    {t.subtitle && (
+                      <h4 className="vertical-timeline-element-subtitle text-pretty italic font-literata">
+                        {t.subtitle}
+                      </h4>
+                    )}
+                    {t.desc && <p className="text-pretty">{t.desc}</p>}
+                    {t.image && (
+                      <div className="mt-4">
+                        <Image
+                          src={t.image}
+                          alt={t.title}
+                          className="rounded-lg shadow-lg text-pretty w-full h-auto transition-transform duration-300 hover:scale-102"
+                        />
+                      </div>
+                    )}
+                  </>
+                ) : undefined}
+              </VerticalTimelineElement>
+            </div>
           );
         })}
       </VerticalTimeline>

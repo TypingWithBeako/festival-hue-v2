@@ -1,37 +1,14 @@
 import styles from "./Cuisine.module.scss";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
-gsap.registerPlugin(useGSAP);
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function Cuisine() {
-  const titleRef = useRef(null);
-  const mapRef = useRef(null);
-  useGSAP(() => {
-    gsap.from(titleRef.current, {
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      ease: "power4.out",
-      scrollTrigger: {
-        trigger: titleRef.current,
-        start: "top 80%",
-        end: "bottom 80%",
-      },
+  useEffect(() => {
+    AOS.init({
+      once: false,
     });
-
-    gsap.from(mapRef.current, {
-      opacity: 0,
-      y: 0,
-      duration: 1,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: titleRef.current,
-        start: "top 80%",
-        end: "bottom 80%",
-      },
-    });
-  });
+  }, []);
   return (
     <section id="CuisineSection" className="bg-white">
       <div
@@ -39,7 +16,8 @@ export default function Cuisine() {
         className="container flex flex-col justify-center pt-24"
       >
         <h1
-          ref={titleRef}
+          data-aos="zoom-in"
+          data-aos-duration="500"
           className={`text-primary self-center font-bold font-literata text-5xl text-center mb-8 ${styles.title}`}
         >
           Ẩm thực
@@ -47,7 +25,6 @@ export default function Cuisine() {
       </div>
       <div className="container h-[90vh] mt-10 mb-20">
         <iframe
-          ref={mapRef}
           src="/story/index.html"
           style={{
             width: "100%",
