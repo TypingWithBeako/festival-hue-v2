@@ -3,10 +3,15 @@ import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faCalendarAlt,
+  faEnvelopeOpenText,
+  faMapMarkedAlt,
+  faImages,
+} from "@fortawesome/free-solid-svg-icons";
+import {
   faFacebook,
   faInstagram,
   faYoutube,
-  faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faPhone,
@@ -76,32 +81,25 @@ export default function Footer() {
               </p>
               <div className="flex space-x-4">
                 <a
-                  href="https://facebook.com/huefestival"
+                  href="https://www.facebook.com/huefestival.official/?locale=vi_VN"
                   target="_blank"
                   className="text-white hover:text-secondary transition-colors duration-300"
                 >
                   <FontAwesomeIcon icon={faFacebook} size="lg" />
                 </a>
                 <a
-                  href="https://instagram.com/huefestival"
+                  href="https://www.instagram.com/huefestival.official/"
                   target="_blank"
                   className="text-white hover:text-secondary transition-colors duration-300"
                 >
                   <FontAwesomeIcon icon={faInstagram} size="lg" />
                 </a>
                 <a
-                  href="https://youtube.com/huefestival"
+                  href="https://www.youtube.com/channel/UCo0R35J2y66-tpr7hAZ7miQ"
                   target="_blank"
                   className="text-white hover:text-secondary transition-colors duration-300"
                 >
                   <FontAwesomeIcon icon={faYoutube} size="lg" />
-                </a>
-                <a
-                  href="https://twitter.com/huefestival"
-                  target="_blank"
-                  className="text-white hover:text-secondary transition-colors duration-300"
-                >
-                  <FontAwesomeIcon icon={faTwitter} size="lg" />
                 </a>
               </div>
             </div>
@@ -114,8 +112,12 @@ export default function Footer() {
                   <a
                     href="https://huefestival.com/Festival-Hue-2024/Festival-Hue"
                     target="_blank"
-                    className="hover:text-secondary transition-colors duration-300"
+                    className="hover:text-secondary transition-colors duration-300 flex items-center gap-3"
                   >
+                    <FontAwesomeIcon
+                      icon={faCalendarAlt}
+                      className="text-secondary"
+                    />
                     Lịch trình sự kiện
                   </a>
                 </li>
@@ -123,8 +125,12 @@ export default function Footer() {
                   <a
                     href="https://huefestival.com/Tai-tro/Thu-ngo/cid/60/pid/1841/tid/Thu-ngo"
                     target="_blank"
-                    className="hover:text-secondary transition-colors duration-300"
+                    className="hover:text-secondary transition-colors duration-300 flex items-center gap-3"
                   >
+                    <FontAwesomeIcon
+                      icon={faEnvelopeOpenText}
+                      className="text-secondary"
+                    />
                     Thư ngỏ
                   </a>
                 </li>
@@ -132,8 +138,12 @@ export default function Footer() {
                   <a
                     href="https://huefestival.com/Festival-Hue/Ban-do-dia-diem-chuong-trinh"
                     target="_blank"
-                    className="hover:text-secondary transition-colors duration-300"
+                    className="hover:text-secondary transition-colors duration-300 flex items-center gap-3"
                   >
+                    <FontAwesomeIcon
+                      icon={faMapMarkedAlt}
+                      className="text-secondary"
+                    />
                     Địa điểm tổ chức
                   </a>
                 </li>
@@ -141,8 +151,12 @@ export default function Footer() {
                   <a
                     href="https://huefestival.com/Thu-vien/Hinh-anh"
                     target="_blank"
-                    className="hover:text-secondary transition-colors duration-300"
+                    className="hover:text-secondary transition-colors duration-300 flex items-center gap-3"
                   >
+                    <FontAwesomeIcon
+                      icon={faImages}
+                      className="text-secondary"
+                    />
                     Thư viện ảnh
                   </a>
                 </li>
@@ -173,7 +187,19 @@ export default function Footer() {
                     className="text-secondary"
                   />
                   <span className="text-sm">
-                    huefestival.official@gmail.com - info@huefestival.com
+                    <a
+                      className="text-white underline"
+                      href="mailto:huefestival.official@gmail.com"
+                    >
+                      huefestival.official@gmail.com
+                    </a>{" "}
+                    -{" "}
+                    <a
+                      className="text-white underline"
+                      href="mailto:info@huefestival.com"
+                    >
+                      info@huefestival.com
+                    </a>
                   </span>
                 </div>
               </div>
