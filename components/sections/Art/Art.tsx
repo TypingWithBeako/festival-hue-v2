@@ -111,10 +111,6 @@ function Art() {
       desc: "Một loại hình nghệ thuật độc đáo của triều Nguyễn, với kỹ thuật tráng men trên đồng. Màu sắc ráng rỡ, bền đẹp, thường được dùng để trang trí trong cung điện.",
       image: PhapLam,
     },
-
-    {
-      icon: starIcon,
-    },
   ];
 
   return (
@@ -179,6 +175,7 @@ function Art() {
             </div>
           );
         })}
+        <VerticalTimelineElement {...starIcon}></VerticalTimelineElement>
       </VerticalTimeline>
     </section>
   );
