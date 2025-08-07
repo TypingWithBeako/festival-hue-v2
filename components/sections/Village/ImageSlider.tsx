@@ -38,7 +38,6 @@ function ImageSlider() {
     autoplay: true,
     autoplaySpeed: 15000,
     dots: true,
-    arrows: false,
     afterChange: (current: any) => {
       setFade(true); // Trigger fade-out
       setTimeout(() => {
@@ -60,6 +59,7 @@ function ImageSlider() {
   return (
     <div className="slider-container container z-50">
       {/* Slider */}
+
       <Slider {...settings}>
         <div className="image-slider-image">
           <Image

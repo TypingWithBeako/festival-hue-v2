@@ -25,6 +25,11 @@
   width: 100%; /* Adjust width as needed */
 }
 
+.slick-prev::before,
+.slick-next::before {
+  font-size: 24px !important;
+}
+
 @media screen and (max-width: 992px) {
   .slider-container {
     bottom: -10%; /* Align at the bottom */
