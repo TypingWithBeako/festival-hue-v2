@@ -210,7 +210,7 @@ export default function Wheel({ onCurrentElementChange }: WheelProps) {
       data-aos="fade-left"
       data-aos-duration="1000"
       data-aos-offset="300"
-      className="absolute right-0 translate-y-[30%] md:-translate-y-1/4 translate-x-[58%]"
+      className=" absolute right-0 translate-y-[30%] md:-translate-y-1/4 translate-x-[58%]"
       style={{
         width: outerDiameter,
         height: outerDiameter,
@@ -219,7 +219,7 @@ export default function Wheel({ onCurrentElementChange }: WheelProps) {
     >
       {/* SVG, rings, arrows, and images - same as before */}
       <svg
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 pointer-events-none "
         width={outerDiameter}
         height={outerDiameter}
       >
@@ -232,10 +232,10 @@ export default function Wheel({ onCurrentElementChange }: WheelProps) {
         />
       </svg>
 
-      <div className="absolute inset-0 rounded-full border-8 border-primary" />
+      <div className="absolute inset-0 rounded-full border-8 border-[#6B3F1A] bg-[#B97A57]" />
 
       <div
-        className="absolute bg-white rounded-full border-8 border-primary"
+        className="absolute bg-white rounded-full border-8 border-[#6B3F1A]"
         style={{
           width: innerR * 2,
           height: innerR * 2,
@@ -264,7 +264,7 @@ export default function Wheel({ onCurrentElementChange }: WheelProps) {
             if (el) imagesRef.current[index] = el;
           }}
           className={`absolute w-40 h-40 md:w-70 md:h-70 rounded-full overflow-hidden ring-6 shadow-lg transition-shadow duration-300
-            ${flashId === image.id ? " ring-green-500" : " ring-gray-300"}`}
+            ${flashId === image.id ? " ring-[#FFD700]" : " ring-[#F8F6F2]"}`}
         >
           <Image
             src={image.src}
