@@ -25,6 +25,14 @@ import {
 } from "@heroui/react";
 
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHome,
+  faInfoCircle,
+  faHammer,
+  faUtensils,
+  faPalette,
+} from "@fortawesome/free-solid-svg-icons";
 
 export const Logo = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -59,10 +67,6 @@ export const Logo = () => {
                 <p>
                   Festival Huế 2025 là sự kiện văn hóa lớn nhất của xứ Huế, nơi
                   hội tụ tinh hoa nghệ thuật truyền thống và hiện đại.
-                </p>
-                <p>
-                  Khám phá những câu chuyện ngàn năm, trải nghiệm không gian văn
-                  hóa độc đáo và hòa mình vào sắc màu lễ hội bất tận!
                 </p>
                 <p>
                   Tham gia cùng chúng tôi để khám phá vẻ đẹp của cố đô Huế qua
@@ -104,11 +108,31 @@ export default function NavigationBar() {
   const [activeSection, setActiveSection] = useState("#HeroSection");
 
   const menuItems = [
-    { label: "Trang chủ", sectionId: "#HeroSection" },
-    { label: "Giới thiệu", sectionId: "#Description" },
-    { label: "Làng nghề", sectionId: "#Village" },
-    { label: "Ẩm thực", sectionId: "#Cuisine" },
-    { label: "Nghệ thuật", sectionId: "#Art" },
+    {
+      label: "Trang chủ",
+      sectionId: "#HeroSection",
+      icon: faHome,
+    },
+    {
+      label: "Giới thiệu",
+      sectionId: "#Description",
+      icon: faInfoCircle,
+    },
+    {
+      label: "Làng nghề",
+      sectionId: "#Village",
+      icon: faHammer,
+    },
+    {
+      label: "Ẩm thực",
+      sectionId: "#Cuisine",
+      icon: faUtensils,
+    },
+    {
+      label: "Nghệ thuật",
+      sectionId: "#Art",
+      icon: faPalette,
+    },
   ];
 
   useEffect(() => {
@@ -192,6 +216,9 @@ export default function NavigationBar() {
                 lenis?.scrollTo(item.sectionId);
               }}
             >
+              <div className="hidden lg:block">
+                <FontAwesomeIcon icon={item.icon} className="w-5 h-5 pr-2" />
+              </div>
               {item.label}
             </Link>
           </NavbarItem>
@@ -206,7 +233,9 @@ export default function NavigationBar() {
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={index}>
             <Link
-              className={`w-full py-2 cursor-pointer ${activeSection === item.sectionId ? "text-primary" : ""}`}
+              className={`w-full py-2 cursor-pointer flex items-center gap-3 ${
+                activeSection === item.sectionId ? "text-primary" : ""
+              }`}
               color={"foreground"}
               onClick={() => {
                 lenis?.scrollTo(item.sectionId);
@@ -214,6 +243,7 @@ export default function NavigationBar() {
               }}
               size="lg"
             >
+              <FontAwesomeIcon icon={item.icon} className="w-5 h-5" />
               {item.label}
             </Link>
           </NavbarMenuItem>

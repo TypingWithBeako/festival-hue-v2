@@ -47,33 +47,33 @@ export default function FoodInformation({ currentFood }: FoodInformationProps) {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.3 }}
-            className="bg-white/95 backdrop-blur-sm rounded-lg p-6 shadow-xl border border-primary/20 w-150"
+            className="bg-background/95 backdrop-blur-sm rounded-lg p-6 shadow-xl border border-primary/20 w-150"
           >
             <div className="mb-4">
-              <h3 className="text-3xl font-bold text-primary mb-2">
+              <h3 className="text-3xl font-bold text-primary mb-2 font-literata">
                 {displayFood.name}
               </h3>
               {displayFood.price && (
-                <span className="text-xl font-semibold text-secondary">
+                <span className="text-xl font-semibold text-secondary font-literata">
                   {displayFood.price}
                 </span>
               )}
             </div>
             <div className="mb-4">
-              <p className="text-gray-700 leading-relaxed text-pretty">
+              <p className="text-gray-700 leading-relaxed text-pretty font-literata">
                 {displayFood.description}
               </p>
             </div>
             {displayFood.ingredients && (
               <div>
-                <h4 className="font-semibold text-primary mb-2">
+                <h4 className="font-semibold text-primary mb-2 font-literata">
                   Nguyên liệu:
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {displayFood.ingredients.map((ingredient, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                      className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-literata"
                     >
                       {ingredient}
                     </span>
