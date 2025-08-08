@@ -119,7 +119,7 @@ function Art() {
         <h1
           data-aos="zoom-in"
           data-aos-duration="500"
-          className={`text-primary font-bold font-literata text-6xl text-center ${styles.title}`}
+          className={`text-primary font-bold font-literata text-5xl md:text-6xl text-center ${styles.title}`}
         >
           Nghệ thuật
         </h1>

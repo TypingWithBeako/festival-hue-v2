@@ -38,7 +38,7 @@ export default function Cuisine() {
         <h1
           data-aos="zoom-in"
           data-aos-duration="500"
-          className={`text-primary self-center font-bold font-literata text-6xl text-center mb-8 ${styles.title}`}
+          className={`text-primary self-center font-bold font-literata text-5xl md:text-6xl text-center mb-8 ${styles.title}`}
         >
           Ẩm thực
         </h1>
