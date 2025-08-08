@@ -38,6 +38,7 @@ export default function Wheel({ onCurrentElementChange }: WheelProps) {
   const imagesRef = useRef<HTMLDivElement[]>([]);
   const pathRef = useRef<SVGPathElement>(null);
   const [currentElement, setCurrentElement] = useState<FoodItem | null>(null);
+  const [flashId, setFlashId] = useState<number | null>(null);
 
   const [isMobile, setIsMobile] = useState(false); // State to track if it's mobile
 
@@ -189,6 +190,8 @@ export default function Wheel({ onCurrentElementChange }: WheelProps) {
 
           if (isAtLeftEdge) {
             setCurrentElement(images[index]);
+            setFlashId(images[index].id);
+            setTimeout(() => setFlashId(null), 300); // 0.3 seconds flash
           }
         },
       });
@@ -260,7 +263,8 @@ export default function Wheel({ onCurrentElementChange }: WheelProps) {
           ref={(el) => {
             if (el) imagesRef.current[index] = el;
           }}
-          className="absolute w-40 h-40 md:w-70 md:h-70 rounded-full overflow-hidden ring-6 ring-gray-300 shadow-lg"
+          className={`absolute w-40 h-40 md:w-70 md:h-70 rounded-full overflow-hidden ring-6 shadow-lg transition-shadow duration-300
+            ${flashId === image.id ? " ring-green-500" : " ring-gray-300"}`}
         >
           <Image
             src={image.src}
