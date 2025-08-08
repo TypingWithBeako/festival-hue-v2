@@ -44,12 +44,6 @@
   outline: none;
 }
 
-@media screen and (max-width: 768px) {
-  .image-slider-image {
-    padding: 0 5px;
-  }
-}
-
 .slick-slide img {
   display: inline-block !important;
   outline: none;
@@ -118,4 +112,14 @@
 
 .bounce-animation {
   animation: bounce 4.5s infinite;
+}
+
+@media screen and (max-width: 768px) {
+  .image-slider-image {
+    padding: 0 5px;
+  }
+  .vertical-timeline-element-date {
+    font-size: 0.9785rem !important;
+    font-weight: 500;
+  }
 }
