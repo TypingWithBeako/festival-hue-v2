@@ -135,7 +135,7 @@ function Art() {
         </p>
       </div>
 
-      <VerticalTimeline animate={false} className="overflow-y-hidden">
+      <VerticalTimeline animate={false}>
         {timeline.map((t, i) => {
           // const contentStyle =
           //   i === 0

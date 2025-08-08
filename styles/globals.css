@@ -83,6 +83,21 @@
   color: #cd7f32;
 }
 
+/* Example usage */
+.vertical-timeline-element-icon {
+  animation: smoothRotate 2s infinite ease-in-out !important;
+}
+
+@keyframes smoothRotate {
+  0%,
+  100% {
+    transform: rotate(-10deg) scale(1);
+  }
+  50% {
+    transform: rotate(10deg) scale(1.1);
+  }
+}
+
 @keyframes bounce {
   0%,
   20%,
