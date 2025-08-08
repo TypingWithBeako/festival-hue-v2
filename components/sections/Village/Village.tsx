@@ -19,7 +19,7 @@ export default function Village() {
         <h1
           data-aos="zoom-in"
           data-aos-duration="500"
-          className={`text-white font-bold font-literata text-5xl text-center ${styles.title}`}
+          className={`text-white font-bold font-literata text-6xl text-center ${styles.title}`}
         >
           Làng nghề
         </h1>
