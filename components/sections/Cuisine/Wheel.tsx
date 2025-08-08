@@ -143,6 +143,7 @@ export default function Wheel({ onCurrentElementChange }: WheelProps) {
     if (!containerRef.current || !pathRef.current) return;
 
     const path = pathRef.current;
+    const tweens: gsap.core.Tween[] = []; // Store all tweens for cleanup
 
     imagesRef.current.forEach((img, index) => {
       if (!img) return;
@@ -159,7 +160,7 @@ export default function Wheel({ onCurrentElementChange }: WheelProps) {
         yPercent: -50,
       });
 
-      gsap.to(img, {
+      const tween = gsap.to(img, {
         motionPath: {
           path: path,
           start: startProgress,
@@ -191,8 +192,14 @@ export default function Wheel({ onCurrentElementChange }: WheelProps) {
           }
         },
       });
+      tweens.push(tween); // Store the tween for cleanup
     });
-  }, [outerR, midR, images.length]);
+
+    // Cleanup function
+    return () => {
+      tweens.forEach((tween) => tween.kill());
+    };
+  }, [outerR, midR, images.length, isMobile]);
 
   return (
     <div
