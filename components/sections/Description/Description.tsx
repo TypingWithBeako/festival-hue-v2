@@ -104,16 +104,16 @@ export default function Description() {
             </p>
             <ul className="mt-4 list-disc pl-8 text-left text-lg leading-relaxed text-pretty">
               <li>
-                Lễ hội mùa Xuân – <b>"Xuân Cố đô"</b>{" "}
+                Lễ hội mùa Xuân - <b>"Xuân Cố đô"</b>{" "}
               </li>
               <li>
-                Lễ hội mùa Hạ – <b>"Kinh thành tỏa sáng"</b>
+                Lễ hội mùa Hạ - <b>"Kinh thành tỏa sáng"</b>
               </li>
               <li>
-                Lễ hội mùa Thu – <b>"Huế vào Thu"</b>
+                Lễ hội mùa Thu - <b>"Huế vào Thu"</b>
               </li>
               <li>
-                Lễ hội mùa Đông – <b>"Mùa đông xứ Huế"</b>
+                Lễ hội mùa Đông - <b>"Mùa đông xứ Huế"</b>
               </li>
             </ul>
           </div>

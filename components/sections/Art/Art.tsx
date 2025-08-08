@@ -115,7 +115,7 @@ function Art() {
 
   return (
     <section id="ArtSection" className="container">
-      <div id="Art" className="flex justify-center mb-20 pt-20">
+      <div id="Art" className="flex justify-center mb-12 pt-20">
         <h1
           data-aos="zoom-in"
           data-aos-duration="500"
@@ -124,6 +124,17 @@ function Art() {
           Nghệ thuật
         </h1>
       </div>
+      <div>
+        <p
+          data-aos="fade-up"
+          data-aos-duration="500"
+          className="self-center md:text-center font-literata text-lg md:text-2xl text-pretty md:text-balance text-left pl-4 md:ml-auto mb-20"
+        >
+          Kết thúc chuyến hành trình, ta trở về với nghệ thuật Huế - nơi ký ức
+          ngân vang trong từng điệu múa, khúc nhạc và ánh nhìn người nghệ sĩ.
+        </p>
+      </div>
+
       <VerticalTimeline animate={false} className="overflow-y-hidden">
         {timeline.map((t, i) => {
           // const contentStyle =
