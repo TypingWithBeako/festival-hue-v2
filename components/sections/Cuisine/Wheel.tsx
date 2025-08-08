@@ -210,7 +210,7 @@ export default function Wheel({ onCurrentElementChange }: WheelProps) {
       data-aos="fade-left"
       data-aos-duration="1000"
       data-aos-offset="300"
-      className=" absolute right-0 translate-y-[30%] md:-translate-y-1/4 translate-x-[58%]"
+      className=" absolute right-0 translate-y-[30%] md:-translate-y-1/4 translate-x-[58%] md:translate-x-[66%] 2xl:translate-x-[63%]"
       style={{
         width: outerDiameter,
         height: outerDiameter,
