@@ -45,7 +45,7 @@ export default function Cuisine() {
         <p
           data-aos="fade-up"
           data-aos-duration="500"
-          className="md:w-[70%] self-center md:text-center  font-literata text-lg md:text-2xl text-pretty text-left pl-4 md:ml-0 pt-8"
+          className="md:w-[70%] self-center md:text-center  font-literata text-lg md:text-2xl text-pretty text-left px-4 md:px-auto md:ml-0 pt-8"
         >
           Chúng ta hãy cùng nhau bước vào một hành trình mới về Huế - nơi mà mỗi
           món ăn không chỉ đơn thuần là thực phẩm, mà còn là một phần linh hồn

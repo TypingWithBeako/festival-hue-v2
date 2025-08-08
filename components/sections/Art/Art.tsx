@@ -128,7 +128,7 @@ function Art() {
         <p
           data-aos="fade-up"
           data-aos-duration="500"
-          className="self-center md:text-center font-literata text-lg md:text-2xl text-pretty md:text-balance text-left pl-4 md:ml-auto mb-20"
+          className="self-center md:text-center font-literata text-lg md:text-2xl text-pretty md:text-balance text-left px-4 md:px-auto md:ml-auto mb-20"
         >
           Kết thúc chuyến hành trình, ta trở về với nghệ thuật Huế - nơi ký ức
           ngân vang trong từng điệu múa, khúc nhạc và ánh nhìn người nghệ sĩ.
