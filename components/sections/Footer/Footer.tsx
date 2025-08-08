@@ -1,6 +1,6 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCalendarAlt,
@@ -25,7 +25,11 @@ export default function Footer() {
   const contentRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    if (window.innerWidth >= 768) {
+    const mm = gsap.matchMedia();
+
+    // Add media query for desktop view
+    mm.add("(min-width: 769px)", () => {
+      // Animation for desktop
       gsap.from(contentRef.current, {
         opacity: 0,
         y: 0,
@@ -39,22 +43,13 @@ export default function Footer() {
           scrub: true,
         },
       });
-    }
-  });
-  // // Background expansion animation
-  // gsap.to(imageRef.current, {
-  //   ease: "power3.out",
-  //   width: "100vw",
-  //   height: "100%",
-  //   scrollTrigger: {
-  //     trigger: imageRef.current,
-  //     start: "top 80%", // Start earlier for smoother transition
-  //     end: "bottom 40%", // End when still visible
-  //     scrub: 1, // Smooth scrubbing
-  //   },
-  // });
 
-  // Content fade-in animation
+      return () => {
+        // Cleanup code for desktop animations
+        gsap.killTweensOf(contentRef.current);
+      };
+    });
+  });
 
   return (
     <section
