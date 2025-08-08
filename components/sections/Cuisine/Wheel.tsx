@@ -166,7 +166,7 @@ export default function Wheel({ onCurrentElementChange }: WheelProps) {
           start: startProgress,
           end: startProgress + 1,
         },
-        duration: 40,
+        duration: 50,
         repeat: -1,
         ease: "none",
         onUpdate: () => {
