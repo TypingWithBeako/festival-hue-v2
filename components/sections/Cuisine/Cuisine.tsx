@@ -43,7 +43,7 @@ export default function Cuisine() {
           Ẩm thực
         </h1>
       </div>
-      <div className="container h-[90vh] mt-10 mb-20 overflow-hidden">
+      <div className="container h-[850px] md:h-[90vh] mt-10 mb-20 overflow-hidden">
         <Wheel onCurrentElementChange={handleCurrentElementChange} />
 
         <div data-aos="fade-up" data-aos-duration="1000">
