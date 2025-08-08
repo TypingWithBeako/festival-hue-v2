@@ -263,7 +263,7 @@ export default function Wheel({ onCurrentElementChange }: WheelProps) {
           ref={(el) => {
             if (el) imagesRef.current[index] = el;
           }}
-          className={`absolute w-40 h-40 md:w-70 md:h-70 rounded-full overflow-hidden ring-6 shadow-lg transition-shadow duration-300
+          className={`absolute w-40 h-40 md:w-70 md:h-70 rounded-full overflow-hidden ring-6 shadow-lg transition-shadow duration-600
             ${flashId === image.id ? " ring-[#FFD700]" : " ring-[#F8F6F2]"}`}
         >
           <Image

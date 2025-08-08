@@ -50,7 +50,7 @@ export default function FoodInformation({ currentFood }: FoodInformationProps) {
             className="bg-background/95 backdrop-blur-sm rounded-lg p-6 shadow-xl border border-primary/20 w-150"
           >
             <div className="mb-4">
-              <h3 className="text-3xl font-bold text-primary mb-2 font-literata">
+              <h3 className="text-3xl font-bold text-primary mb-2 font-literata text-pretty">
                 {displayFood.name}
               </h3>
               {displayFood.price && (

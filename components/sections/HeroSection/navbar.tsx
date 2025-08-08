@@ -29,7 +29,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
   faInfoCircle,
-  faHammer,
+  faBrush,
   faUtensils,
   faPalette,
 } from "@fortawesome/free-solid-svg-icons";
@@ -121,7 +121,7 @@ export default function NavigationBar() {
     {
       label: "Làng nghề",
       sectionId: "#Village",
-      icon: faHammer,
+      icon: faBrush,
     },
     {
       label: "Ẩm thực",
