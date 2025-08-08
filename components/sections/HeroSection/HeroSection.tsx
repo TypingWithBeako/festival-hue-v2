@@ -3,7 +3,6 @@
 import { useLenis } from "lenis/react";
 import { useRef } from "react";
 import gsap from "gsap";
-
 import localFont from "next/font/local";
 const fontThuPhap1 = localFont({ src: "../../../fonts/Vntfap01.ttf" });
 
@@ -121,7 +120,10 @@ export default function HeroSection() {
           <div className="scroll-indicator self-center absolute bottom-0 hidden sm:block">
             <FontAwesomeIcon
               icon={faChevronDown}
-              className="text-primary text-2xl animate-bounce mb-1"
+              className="text-primary text-2xl animate-bounce mb-1 cursor-pointer"
+              onClick={() => {
+                lenis?.scrollTo("#Description");
+              }}
             />
           </div>
         </div>
