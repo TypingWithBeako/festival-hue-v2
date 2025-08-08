@@ -80,6 +80,8 @@
 
 .vertical-timeline-element-date {
   font-weight: bold !important;
+  font-size: 1.3rem !important;
+  top: 0px;
   color: #cd7f32;
 }
 
