@@ -13,7 +13,8 @@ import "aos/dist/aos.css";
 import Anh1 from "@/public/Cuisine/Anh1.jpg";
 import Anh2 from "@/public/Cuisine/Anh2.jpg";
 import Anh3 from "@/public/Cuisine/Anh3.jpg";
-import Anh4 from "@/public/Cuisine/Anh4.jpg";
+import Anh4 from "@/public/Cuisine/Anh4.webp";
+import Anh5 from "@/public/Cuisine/Anh5.jpg";
 
 // Register the plugin
 gsap.registerPlugin(MotionPathPlugin);
@@ -76,41 +77,51 @@ export default function Wheel({ onCurrentElementChange }: WheelProps) {
       id: 1,
       src: Anh1,
       alt: "Dish 1",
-      name: "Bánh mì Huế",
+      name: "Bún bò Huế",
       description:
-        "Bánh mì truyền thống của Huế với nhân thịt nướng thơm ngon, rau sống tươi mát và nước chấm đặc biệt.",
-      price: "25.000 VNĐ",
-      ingredients: ["Bánh mì", "Thịt nướng", "Rau sống", "Nước chấm"],
+        "Bún bò Huế là món ăn nổi tiếng nhất xứ Huế, gây ấn tượng với hương vị đậm đà, cay nhẹ, thơm nồng mùi sả và mắm ruốc đặc trưng.",
+      price: "25.000 - 45.000 VNĐ",
+      ingredients: ["Bún", "Thịt bò", "Rau sống", "Giò heo"],
     },
     {
       id: 2,
       src: Anh2,
       alt: "Dish 2",
-      name: "Bún bò Huế",
+      name: "Cơm hến",
       description:
-        "Món ăn đặc sản nổi tiếng của xứ Huế với nước dựng từ xương heo, thịt bò đậm đà hương vị.",
-      price: "45.000 VNĐ",
-      ingredients: ["Bún", "Thịt bò", "Chả cua", "Rau răm"],
+        "Cơm hến dân dã mà đậm đà, với vị cay, mặn, ngọt, giòn, mềm hòa quyện, ăn kèm nước hến nóng như canh.",
+      price: "10.000 - 20.000 VNĐ",
+      ingredients: ["Cơm", "Hến xào", "Mắm ruốc", "Rau sống", "Tóp mỡ"],
     },
     {
       id: 3,
       src: Anh3,
       alt: "Dish 3",
-      name: "Nem lụi",
+      name: "Bánh bèo - nậm - lọc ",
       description:
-        "Nem nướng trên que tre với hương vị thơm ngon, ăn kèm bánh tráng và rau sống.",
-      price: "35.000 VNĐ",
-      ingredients: ["Thịt heo", "Bánh tráng", "Rau sống", "Nước chấm"],
+        "Bánh bèo - nậm - lọc là bộ ba bánh truyền thống Huế, nhẹ bụng, tinh tế, thường dùng đãi khách hoặc làm quà quê.",
+      price: "10.000 - 30.000 VNĐ",
+      ingredients: ["Bột gạo", "Tôm", "Da heo", "Nước chấm..."],
     },
     {
       id: 4,
       src: Anh4,
       alt: "Dish 4",
-      name: "Cơm âm phủ",
+      name: "Chè Huế",
       description:
-        "Món cơm trộn đặc sắc với nhiều loại rau củ, thịt và gia vị phong phú của Huế.",
-      price: "40.000 VNĐ",
-      ingredients: ["Cơm", "Thịt heo", "Rau củ", "Gia vị Huế"],
+        "Chè Huế phong phú với hơn 20 loại, mang hương vị thanh mát, ngọt dịu, thể hiện sự tinh tế của ẩm thực cung đình và dân gian.",
+      price: "7.000 - 15.000 VNĐ",
+      ingredients: ["Đậu (tuỳ loại)", "Nước dừa", "Đường phèn"],
+    },
+    {
+      id: 5,
+      src: Anh5,
+      alt: "Dish 5",
+      name: "Nem công - chả phượng",
+      description:
+        "Là món ăn cung đình biểu tượng cho sự cao quý, được chế biến công phu, trình bày như hình chim công, chim phượng, thường xuất hiện trong yến tiệc vua chúa.",
+      price: "200.000 - 500.000+ VNĐ",
+      ingredients: ["Thịt heo", "Da heo", "Rau củ"],
     },
   ];
 

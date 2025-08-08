@@ -1,6 +1,7 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import Anh5 from "@/public/Cuisine/Anh5.jpg";
 
 interface FoodItem {
   id: number;
@@ -17,7 +18,18 @@ interface FoodInformationProps {
 }
 
 export default function FoodInformation({ currentFood }: FoodInformationProps) {
-  const [displayFood, setDisplayFood] = useState<FoodItem | null>(null);
+  const BunBo: FoodItem = {
+    id: 5,
+    src: Anh5,
+    alt: "Dish 5",
+    name: "Nem công - chả phượng",
+    description:
+      "Là món ăn cung đình biểu tượng cho sự cao quý, được chế biến công phu, trình bày như hình chim công, chim phượng, thường xuất hiện trong yến tiệc vua chúa.",
+    price: "200.000 - 500.000+ VNĐ",
+    ingredients: ["Thịt heo", "Da heo", "Rau củ"],
+  };
+
+  const [displayFood, setDisplayFood] = useState<FoodItem | null>(BunBo);
 
   useEffect(() => {
     if (currentFood) {
@@ -31,9 +43,9 @@ export default function FoodInformation({ currentFood }: FoodInformationProps) {
         {displayFood && (
           <motion.div
             key={displayFood.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.3 }}
             className="bg-white/95 backdrop-blur-sm rounded-lg p-6 shadow-xl border border-primary/20 w-150"
           >
@@ -69,11 +81,7 @@ export default function FoodInformation({ currentFood }: FoodInformationProps) {
                 </div>
               </div>
             )}
-            <div className="mt-4 pt-4 border-t border-gray-200">
-              <span className="text-sm text-gray-500">
-                ID: {displayFood.id} • {displayFood.alt}
-              </span>
-            </div>
+            <div className="mt-4 pt-4 border-t border-gray-200"></div>
           </motion.div>
         )}
       </AnimatePresence>
