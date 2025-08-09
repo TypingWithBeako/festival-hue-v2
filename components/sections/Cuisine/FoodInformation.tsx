@@ -11,6 +11,8 @@ interface FoodItem {
   description: string;
   price?: string;
   ingredients?: string[];
+  literature?: string;
+  literatureSource?: string; // Add this line
 }
 
 interface FoodInformationProps {
@@ -18,7 +20,7 @@ interface FoodInformationProps {
 }
 
 export default function FoodInformation({ currentFood }: FoodInformationProps) {
-  const BunBo: FoodItem = {
+  const NemCongChaPhuong: FoodItem = {
     id: 5,
     src: Anh5,
     alt: "Dish 5",
@@ -26,10 +28,24 @@ export default function FoodInformation({ currentFood }: FoodInformationProps) {
     description:
       "Là món ăn cung đình biểu tượng cho sự cao quý, được chế biến công phu, trình bày như hình chim công, chim phượng, thường xuất hiện trong yến tiệc vua chúa.",
     price: "200.000 - 500.000+ VNĐ",
-    ingredients: ["Thịt heo", "Da heo", "Rau củ"],
+    ingredients: [
+      "Thịt heo",
+      "Tôm tươi",
+      "Trứng gà",
+      "Nấm mèo",
+      "Giò sống",
+      "Rau củ",
+    ],
+    literature: `"Mời anh thử miếng chả này,
+        Nâng ly hào sảng, hương say tận lòng.
+        Cung đình chả phụng, nem công,
+        Đôi ta nem chả vốn dòng dân gian."`,
+    literatureSource: `Trích trong bài thơ “Chả Huế” - Tác giả: Võ Quê`,
   };
 
-  const [displayFood, setDisplayFood] = useState<FoodItem | null>(BunBo);
+  const [displayFood, setDisplayFood] = useState<FoodItem | null>(
+    NemCongChaPhuong
+  );
 
   useEffect(() => {
     if (currentFood) {
@@ -81,7 +97,22 @@ export default function FoodInformation({ currentFood }: FoodInformationProps) {
                 </div>
               </div>
             )}
-            <div className="mt-4 pt-4 border-t border-gray-200"></div>
+
+            {displayFood.literature && (
+              <div className="mt-6 pt-4 border-t border-gray-200 hidden md:block">
+                <h4 className="font-semibold text-primary mb-2 font-literata">
+                  Văn chương viết về món ăn:
+                </h4>
+                <pre className="whitespace-pre-line text-gray-700 font-literata text-base">
+                  {displayFood.literature}
+                </pre>
+                {displayFood.literatureSource && (
+                  <div className="mt-2 pl-3 border-l-2 border-secondary text-sm text-secondary italic font-literata text-pretty">
+                    {displayFood.literatureSource}
+                  </div>
+                )}
+              </div>
+            )}
           </motion.div>
         )}
       </AnimatePresence>

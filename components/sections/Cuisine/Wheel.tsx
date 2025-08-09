@@ -13,7 +13,7 @@ import "aos/dist/aos.css";
 import Anh1 from "@/public/Cuisine/Anh1.jpg";
 import Anh2 from "@/public/Cuisine/Anh2.jpg";
 import Anh3 from "@/public/Cuisine/Anh3.jpg";
-import Anh4 from "@/public/Cuisine/Anh4.webp";
+import Anh4 from "@/public/Cuisine/Anh4.jpg";
 import Anh5 from "@/public/Cuisine/Anh5.jpg";
 
 // Register the plugin
@@ -27,6 +27,8 @@ interface FoodItem {
   description: string;
   price?: string;
   ingredients?: string[];
+  literature?: string;
+  literatureSource?: string; // Add this line
 }
 
 interface WheelProps {
@@ -82,7 +84,20 @@ export default function Wheel({ onCurrentElementChange }: WheelProps) {
       description:
         "Bún bò Huế là món ăn nổi tiếng nhất xứ Huế, gây ấn tượng với hương vị đậm đà, cay nhẹ, thơm nồng mùi sả và mắm ruốc đặc trưng.",
       price: "25.000 - 45.000 VNĐ",
-      ingredients: ["Bún", "Thịt bò", "Rau sống", "Giò heo"],
+      ingredients: [
+        "Bún",
+        "Thịt bò",
+        "Rau sống",
+        "Giò heo",
+        "Huyết",
+        "Chả",
+        "Xương hầm",
+      ],
+      literature: `"Nhìn xem... Kìa những miếng thịt bò
+Thấp thoáng trong tô những cục giò.
+Giò sống, hành trần vài miếng huyết.
+Ớt tươi, mắm ruốc rải tí ngò."`,
+      literatureSource: `Trích trong bài thơ “Bún bò xứ Huế” - Tác giả: Nguyễn Thị Thêm`,
     },
     {
       id: 2,
@@ -93,6 +108,11 @@ export default function Wheel({ onCurrentElementChange }: WheelProps) {
         "Cơm hến dân dã mà đậm đà, với vị cay, mặn, ngọt, giòn, mềm hòa quyện, ăn kèm nước hến nóng như canh.",
       price: "10.000 - 20.000 VNĐ",
       ingredients: ["Cơm", "Hến xào", "Mắm ruốc", "Rau sống", "Tóp mỡ"],
+      literature: `"Đã nghe ớt đỏ cay nồng
+        Tìm trong vị Hến một dòng Hương xanh
+        Ruốc thơm, cơm nguội, rau lành
+        Mời anh buổi sáng chân thành món quê."`,
+      literatureSource: `Trích trong bài thơ "Cơm Hến" - Tác giả: Võ Quê`,
     },
     {
       id: 3,
@@ -102,17 +122,27 @@ export default function Wheel({ onCurrentElementChange }: WheelProps) {
       description:
         "Bánh bèo - nậm - lọc là bộ ba bánh truyền thống Huế, nhẹ bụng, tinh tế, thường dùng đãi khách hoặc làm quà quê.",
       price: "10.000 - 30.000 VNĐ",
-      ingredients: ["Bột gạo", "Tôm", "Da heo", "Nước chấm..."],
+      ingredients: ["Bột gạo", "Tôm", "Da heo", "Nước chấm"],
+      literature: `"Tôm chấy hồng thắm cánh bèo
+Dẻo thơm bột gạo quê nghèo nên thương
+Hẹn em ngồi quán ven đường
+Bánh bèo kết mối tơ duyên đôi lòng"`,
+      literatureSource: `Trích trong "Bánh bèo" - Tác giả: Võ Quê`,
     },
     {
       id: 4,
       src: Anh4,
       alt: "Dish 4",
-      name: "Chè Huế",
+      name: "Chè bột lọc heo quay",
       description:
-        "Chè Huế phong phú với hơn 20 loại, mang hương vị thanh mát, ngọt dịu, thể hiện sự tinh tế của ẩm thực cung đình và dân gian.",
-      price: "7.000 - 15.000 VNĐ",
-      ingredients: ["Đậu (tuỳ loại)", "Nước dừa", "Đường phèn"],
+        "Chè bột lọc heo quay là món chè đặc sản nổi tiếng của Huế, kết hợp độc đáo giữa vị ngọt thanh của nước đường và vị mặn béo của nhân thịt heo quay được bọc trong lớp bột lọc dai mềm.",
+      price: "10.000 - 15.000 VNĐ",
+      ingredients: ["Thịt heo quay", "Bột lọc", "Gừng", "Đường phèn", "Lá dừa"],
+      literature: `"Ngọt ngào bùi béo tìm nhau
+Thịt quay nằm giữa trắng phau bột mềm
+Quen nhau tình đã nên duyên
+Chè ngon xứ Huế ngỡ quên đường về."`,
+      literatureSource: `Trích trong “Chè bột lọc bọc thịt quay” - Tác giả: Võ Quê`,
     },
     {
       id: 5,
@@ -122,7 +152,19 @@ export default function Wheel({ onCurrentElementChange }: WheelProps) {
       description:
         "Là món ăn cung đình biểu tượng cho sự cao quý, được chế biến công phu, trình bày như hình chim công, chim phượng, thường xuất hiện trong yến tiệc vua chúa.",
       price: "200.000 - 500.000+ VNĐ",
-      ingredients: ["Thịt heo", "Da heo", "Rau củ"],
+      ingredients: [
+        "Thịt heo",
+        "Tôm tươi",
+        "Trứng gà",
+        "Nấm mèo",
+        "Giò sống",
+        "Rau củ",
+      ],
+      literature: `"Mời anh thử miếng chả này,
+        Nâng ly hào sảng, hương say tận lòng.
+        Cung đình chả phụng, nem công,
+        Đôi ta nem chả vốn dòng dân gian."`,
+      literatureSource: `Trích trong bài thơ “Chả Huế” - Tác giả: Võ Quê`,
     },
   ];
 
@@ -167,7 +209,7 @@ export default function Wheel({ onCurrentElementChange }: WheelProps) {
           start: startProgress,
           end: startProgress + 1,
         },
-        duration: 50,
+        duration: 60,
         repeat: -1,
         ease: "none",
         onUpdate: () => {
