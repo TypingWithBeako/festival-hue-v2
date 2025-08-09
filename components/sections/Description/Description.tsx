@@ -21,17 +21,21 @@ export default function Description() {
   useGSAP(() => {
     const sections = [section1Ref.current, section2Ref.current];
 
-    gsap.from(dividerRef.current, {
-      opacity: 0,
-      width: 0,
-      ease: "power4.out",
-      scrollTrigger: {
-        trigger: dividerRef.current,
-        start: "top 100%",
-        end: "bottom 70%",
-        scrub: true,
-      },
-    });
+    gsap.fromTo(
+      dividerRef.current,
+      { opacity: 0, width: 0 },
+      {
+        opacity: 1,
+        width: "50%",
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: dividerRef.current,
+          start: "top 100%",
+          end: "bottom 70%",
+          scrub: true,
+        },
+      }
+    );
     // Animate each section
     sections.forEach((section, _) => {
       gsap.from(section, {
