@@ -36,9 +36,7 @@ export default function RootLayout({
       <LenisScrollProvider>
         <body>
           <Providers>
-            <div
-              className={`fixed top-0 left-0 w-full z-10 ${fontLiterata.variable}`}
-            >
+            <div className={`fixed top-0 left-0 w-full z-10`}>
               <NavigationBar />
             </div>
             <div

@@ -2,7 +2,6 @@
 
 import { useLenis } from "lenis/react";
 import React, { useEffect, useState } from "react";
-import { fontLiterata } from "@/config/fonts"; // adjust import path as needed
 import {
   Navbar,
   NavbarBrand,
@@ -233,7 +232,7 @@ export default function NavigationBar() {
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={index}>
             <Link
-              className={`${fontLiterata.variable} font-literata w-full py-2 cursor-pointer flex items-center gap-3 ${
+              className={`w-full py-2 cursor-pointer flex items-center gap-3 ${
                 activeSection === item.sectionId ? "text-primary" : ""
               }`}
               color={"foreground"}
