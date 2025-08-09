@@ -2,6 +2,7 @@
 
 import { useLenis } from "lenis/react";
 import React, { useEffect, useState } from "react";
+import { fontLiterata } from "@/config/fonts"; // adjust import path as needed
 import {
   Navbar,
   NavbarBrand,
@@ -188,8 +189,7 @@ export default function NavigationBar() {
           ? ""
           : "transition-all duration-300 sm:p-[20px] sm:border-solid sm:border-white sm:bg-background sm:rounded-[40px] sm:shadow-[0px_0px_3rem_rgba(127,137,161,0.604)]",
         menu: `py-6 ${isScrolled ? "mt-2" : "mt-4"}`,
-        menuItem:
-          "cursor-pointer font-literata transition-all duration-300 font-bold hover:scale-101",
+        menuItem: `cursor-pointer transition-all duration-300 font-bold hover:scale-101`,
         toggleIcon: isScrolled ? "" : "text-white",
       }}
       onMenuOpenChange={setIsMenuOpen}
@@ -233,7 +233,7 @@ export default function NavigationBar() {
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={index}>
             <Link
-              className={`w-full py-2 cursor-pointer flex items-center gap-3 ${
+              className={`${fontLiterata.variable} font-literata w-full py-2 cursor-pointer flex items-center gap-3 ${
                 activeSection === item.sectionId ? "text-primary" : ""
               }`}
               color={"foreground"}
