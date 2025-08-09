@@ -39,7 +39,7 @@ export default function Footer() {
         scrollTrigger: {
           trigger: contentRef.current,
           start: "top 100%",
-          end: "top 70%",
+          end: "top 80%",
           scrub: true,
         },
       });
