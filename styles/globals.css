@@ -36,6 +36,10 @@
   }
 }
 
+.slick-list {
+  cursor: grab !important;
+}
+
 .image-slider-image {
   width: 480px; /* Consistent width */
   height: 270px; /* Consistent height */
@@ -58,7 +62,7 @@
 }
 .slick-slide {
   filter: brightness(0.5); /* Darken all slides */
-  transform: scale(0.9);
+  transform: scale(0.875);
   transition: all 0.3s ease-in-out; /* Smooth transition */
   outline: none;
 }

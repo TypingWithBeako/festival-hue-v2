@@ -60,35 +60,25 @@ function ImageSlider() {
     ],
   };
 
+  const images = [
+    { src: Anh1, alt: "Làng nghề truyền thống hoa giấy Thanh Tiên" },
+    { src: Anh2, alt: "Làng nghề Dệt Dèng A Rưm" },
+    { src: Anh3, alt: "Làng nghề tranh Sình" },
+    { src: Anh4, alt: "Làng nghề làm hương Thuỷ Xuân" },
+    { src: Anh5, alt: "Làng nghề gốm Phước Tích" },
+    { src: Anh6, alt: "Làng nghề bánh tráng, bánh ướt Lựu Bảo" },
+  ];
+
   return (
     <div className="slider-container container z-50">
       {/* Slider */}
 
       <Slider {...settings}>
-        <div className="image-slider-image">
-          <Image
-            src={Anh1}
-            alt="Làng nghề truyền thống hoa giấy Thanh Tiên"
-          ></Image>
-        </div>
-        <div className="image-slider-image">
-          <Image src={Anh2} alt="Làng nghề làm nón lá"></Image>
-        </div>
-        <div className="image-slider-image">
-          <Image src={Anh3} alt="Làng nghề tranh Sình"></Image>
-        </div>
-        <div className="image-slider-image">
-          <Image src={Anh4} alt="Làng nghề làm hương Thuỷ Xuân"></Image>
-        </div>
-        <div className="image-slider-image">
-          <Image src={Anh5} alt="Làng nghề gốm Phước Tích"></Image>
-        </div>
-        <div className="image-slider-image">
-          <Image
-            src={Anh6}
-            alt="Làng nghề bánh tráng, bánh ướt Lựu Bảo"
-          ></Image>
-        </div>
+        {images.map((img, idx) => (
+          <div className="image-slider-image " key={idx}>
+            <Image src={img.src} alt={img.alt} />
+          </div>
+        ))}
       </Slider>
 
       {/* Dynamic Text with Fade Transition */}
