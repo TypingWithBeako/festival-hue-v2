@@ -40,6 +40,10 @@
   cursor: grab !important;
 }
 
+.slick-list:active {
+  cursor: grabbing !important;
+}
+
 .image-slider-image {
   width: 480px; /* Consistent width */
   height: 270px; /* Consistent height */

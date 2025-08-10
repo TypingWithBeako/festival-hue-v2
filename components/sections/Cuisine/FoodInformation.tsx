@@ -12,6 +12,7 @@ interface FoodItem {
   price?: string;
   ingredients?: string[];
   literature?: string;
+  literatureFoodName?: string;
   literatureSource?: string; // Add this line
 }
 
@@ -40,6 +41,7 @@ export default function FoodInformation({ currentFood }: FoodInformationProps) {
         Nâng ly hào sảng, hương say tận lòng.
         Cung đình chả phụng, nem công,
         Đôi ta nem chả vốn dòng dân gian."`,
+    literatureFoodName: "Nem công - chả phượng",
     literatureSource: `Trích trong bài thơ “Chả Huế” - Tác giả: Võ Quê`,
   };
 
@@ -101,7 +103,7 @@ export default function FoodInformation({ currentFood }: FoodInformationProps) {
             {displayFood.literature && (
               <div className="mt-6 pt-4 border-t border-gray-200 hidden md:block">
                 <h4 className="font-semibold text-primary mb-2 font-literata">
-                  Văn chương viết về món ăn:
+                  Thơ ca viết về {displayFood.literatureFoodName}:
                 </h4>
                 <pre className="whitespace-pre-line text-gray-700 font-literata text-base">
                   {displayFood.literature}

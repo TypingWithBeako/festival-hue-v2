@@ -30,7 +30,7 @@ import {
   faHome,
   faInfoCircle,
   faBrush,
-  faUtensils,
+  faBowlRice,
   faPalette,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -126,7 +126,7 @@ export default function NavigationBar() {
     {
       label: "Ẩm thực",
       sectionId: "#Cuisine",
-      icon: faUtensils,
+      icon: faBowlRice,
     },
     {
       label: "Nghệ thuật",

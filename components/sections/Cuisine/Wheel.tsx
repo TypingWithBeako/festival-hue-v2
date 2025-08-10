@@ -28,6 +28,7 @@ interface FoodItem {
   price?: string;
   ingredients?: string[];
   literature?: string;
+  literatureFoodName?: string;
   literatureSource?: string; // Add this line
 }
 
@@ -97,6 +98,7 @@ export default function Wheel({ onCurrentElementChange }: WheelProps) {
 Thấp thoáng trong tô những cục giò.
 Giò sống, hành trần vài miếng huyết.
 Ớt tươi, mắm ruốc rải tí ngò."`,
+      literatureFoodName: "Bún bò Huế",
       literatureSource: `Trích trong bài thơ “Bún bò xứ Huế” - Tác giả: Nguyễn Thị Thêm`,
     },
     {
@@ -112,6 +114,7 @@ Giò sống, hành trần vài miếng huyết.
         Tìm trong vị Hến một dòng Hương xanh
         Ruốc thơm, cơm nguội, rau lành
         Mời anh buổi sáng chân thành món quê."`,
+      literatureFoodName: "Cơm hến",
       literatureSource: `Trích trong bài thơ "Cơm Hến" - Tác giả: Võ Quê`,
     },
     {
@@ -127,6 +130,7 @@ Giò sống, hành trần vài miếng huyết.
 Dẻo thơm bột gạo quê nghèo nên thương
 Hẹn em ngồi quán ven đường
 Bánh bèo kết mối tơ duyên đôi lòng"`,
+      literatureFoodName: "Bánh bèo",
       literatureSource: `Trích trong "Bánh bèo" - Tác giả: Võ Quê`,
     },
     {
@@ -142,6 +146,7 @@ Bánh bèo kết mối tơ duyên đôi lòng"`,
 Thịt quay nằm giữa trắng phau bột mềm
 Quen nhau tình đã nên duyên
 Chè ngon xứ Huế ngỡ quên đường về."`,
+      literatureFoodName: "Chè bột lọc heo quay",
       literatureSource: `Trích trong “Chè bột lọc bọc thịt quay” - Tác giả: Võ Quê`,
     },
     {
@@ -164,6 +169,7 @@ Chè ngon xứ Huế ngỡ quên đường về."`,
         Nâng ly hào sảng, hương say tận lòng.
         Cung đình chả phụng, nem công,
         Đôi ta nem chả vốn dòng dân gian."`,
+      literatureFoodName: "Nem công - chả phượng",
       literatureSource: `Trích trong bài thơ “Chả Huế” - Tác giả: Võ Quê`,
     },
   ];
