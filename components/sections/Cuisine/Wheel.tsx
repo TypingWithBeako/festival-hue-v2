@@ -216,7 +216,7 @@ Chè ngon xứ Huế ngỡ quên đường về."`,
           start: startProgress,
           end: startProgress + 1,
         },
-        duration: 60,
+        duration: isMobile ? 50 : 60,
         repeat: -1,
         ease: "none",
         onUpdate: () => {
