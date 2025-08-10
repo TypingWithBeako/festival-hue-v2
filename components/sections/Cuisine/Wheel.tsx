@@ -265,7 +265,7 @@ Chè ngon xứ Huế ngỡ quên đường về."`,
   return (
     <div
       title={isPaused ? "Nhấn để tiếp tục" : "Nhấn để dừng"}
-      onPointerDown={handleWheelClick} // Use this instead of onClick/onTouchStart
+      onClick={handleWheelClick}
       ref={containerRef}
       data-aos="fade-left"
       data-aos-duration="1000"
