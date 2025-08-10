@@ -42,7 +42,8 @@ export default function Wheel({ onCurrentElementChange }: WheelProps) {
   const pathRef = useRef<SVGPathElement>(null);
   const [currentElement, setCurrentElement] = useState<FoodItem | null>(null);
   const [flashId, setFlashId] = useState<number | null>(null);
-
+  const tweensRef = useRef<gsap.core.Tween[]>([]);
+  const [isPaused, setIsPaused] = useState(false);
   const [isMobile, setIsMobile] = useState(false); // State to track if it's mobile
 
   useEffect(() => {
@@ -246,19 +247,30 @@ Chè ngon xứ Huế ngỡ quên đường về."`,
       tweens.push(tween); // Store the tween for cleanup
     });
 
+    tweensRef.current = tweens; // Save tweens for later access
+
     // Cleanup function
     return () => {
       tweens.forEach((tween) => tween.kill());
     };
   }, [outerR, midR, images.length, isMobile]);
 
+  const handleWheelClick = () => {
+    setIsPaused((prev) => {
+      tweensRef.current.forEach((tween) => tween.paused(!prev));
+      return !prev;
+    });
+  };
+
   return (
     <div
+      title={isPaused ? "Nhấn để tiếp tục" : "Nhấn để dừng"}
+      onPointerDown={handleWheelClick} // Use this instead of onClick/onTouchStart
       ref={containerRef}
       data-aos="fade-left"
       data-aos-duration="1000"
       data-aos-offset="300"
-      className=" absolute right-0 translate-y-[30%] md:-translate-y-1/4 translate-x-[58%] md:translate-x-[66%] 2xl:translate-x-[63%]"
+      className={`absolute right-0 translate-y-[30%] md:-translate-y-1/4 translate-x-[58%] md:translate-x-[73%] 2xl:translate-x-[63%] cursor-pointer`}
       style={{
         width: outerDiameter,
         height: outerDiameter,
@@ -303,7 +315,6 @@ Chè ngon xứ Huế ngỡ quên đường về."`,
           </div>
         </div>
       </div>
-
       {/* Moving images */}
       {images.map((image, index) => (
         <div
