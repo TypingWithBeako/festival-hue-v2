@@ -43,7 +43,7 @@ export default function RootLayout({
               className={`relative flex flex-col w-full z-0 ${fontLiterata.variable}`}
             >
               {children}
-              <ScrollRestorationManager />
+              {/* <ScrollRestorationManager /> */}
             </div>
           </Providers>
         </body>
