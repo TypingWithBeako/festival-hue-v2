@@ -83,7 +83,7 @@ function ImageSlider() {
 
       {/* Dynamic Text with Fade Transition */}
       <div
-        className={`text-center pt-8 transition-opacity duration-300 min-h-[36rem] md:min-h-[28rem] md:pt-14 ${fade ? "opacity-0" : "opacity-100"}`}
+        className={`text-center pt-8 transition-opacity duration-300 min-h-[36rem] md:min-h-[28rem] md:pt-10 ${fade ? "opacity-0" : "opacity-100"}`}
       >
         <h3 className="text-3xl py-8 font-bold text-pretty font-literata text-primary px-4 md:px-0">
           {titles[activeSlide]}

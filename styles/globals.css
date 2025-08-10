@@ -9,10 +9,6 @@
   text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Dark shadow for depth */
 }
 
-.slick-list {
-  padding: 50px 10px 10px 10px !important; /* d3333d*/
-}
-
 .slick-dots {
   display: flex;
   justify-content: center;
@@ -66,7 +62,7 @@
   height: 100%; /* Ensures the image fills the container */
   object-fit: cover; /* Ensures the image maintains aspect ratio */
   display: inline-block; /* Removes default spacing below the image */
-  border-radius: 10px; /* Optional: Adds rounded corners */
+  border-radius: 10px; /* Optional: Adds rounded corners dd*/
 }
 .slick-slide {
   filter: brightness(0.5); /* Darken all slides */
@@ -77,7 +73,7 @@
 
 .slick-center {
   filter: brightness(1); /* Restore brightness for the center slide */
-  transform: scale(1.05);
+  transform: scale(1);
 }
 
 *::-webkit-scrollbar {
@@ -99,7 +95,7 @@
 @keyframes smoothRotate {
   0%,
   100% {
-    transform: rotate(-10deg) scale(1); /* */
+    transform: rotate(-10deg) scale(1);
   }
   50% {
     transform: rotate(10deg) scale(1.1);
@@ -128,7 +124,7 @@
 
 @media screen and (max-width: 768px) {
   .image-slider-image {
-    padding: 0px 35px 0px 15px !important;
+    padding: 0 15px !important;
   }
   .vertical-timeline-element-date {
     font-size: 0.9785rem !important;
