@@ -25,7 +25,7 @@ export default function FoodInformation({ currentFood }: FoodInformationProps) {
     id: 5,
     src: Anh5,
     alt: "Dish 5",
-    name: "Nem công - chả phượng",
+    name: "Nem công - chả\u00A0phượng",
     description:
       "Là món ăn cung đình biểu tượng cho sự cao quý, được chế biến công phu, trình bày như hình chim công, chim phượng, thường xuất hiện trong yến tiệc vua chúa.",
     price: "200.000 - 500.000+ VNĐ",

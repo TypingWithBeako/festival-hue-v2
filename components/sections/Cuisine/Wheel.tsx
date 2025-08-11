@@ -154,7 +154,7 @@ Chè ngon xứ Huế ngỡ quên đường về."`,
       id: 5,
       src: Anh5,
       alt: "Dish 5",
-      name: "Nem công - chả phượng",
+      name: "Nem công - chả\u00A0phượng", // \u00A0 stands for non-breaking white space, which makes text non-breakable on the space character (chả phượng)
       description:
         "Là món ăn cung đình biểu tượng cho sự cao quý, được chế biến công phu, trình bày như hình chim công, chim phượng, thường xuất hiện trong yến tiệc vua chúa.",
       price: "200.000 - 500.000+ VNĐ",
