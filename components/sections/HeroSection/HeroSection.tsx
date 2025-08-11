@@ -33,7 +33,7 @@ export default function HeroSection() {
       ease: "power3.out",
     });
 
-    const split = new SplitText(textRef.current, { type: "chars" });
+    const split = new SplitText(textRef.current, { type: "words, chars" });
     timeline.from(
       split.chars,
       {
