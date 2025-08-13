@@ -1,53 +1,88 @@
-# Next.js & HeroUI Template
+# ✨ Festival Huế 2025 – Trải nghiệm số về Làng nghề, Ẩm thực & Nghệ thuật
 
-This is a template for creating applications using Next.js 14 (app directory) and HeroUI (v2).
+Chào mừng đến với dự án Website **"Festival Huế 2025 – Trải nghiệm số về Làng nghề, Ẩm thực & Nghệ thuật"**. Đây là một nền tảng số được xây dựng nhằm giới thiệu và quảng bá nét đẹp văn hóa Huế đến cộng đồng thông qua các nội dung tương tác, hiện đại và dễ tiếp cận.
 
-[Try it on CodeSandbox](https://githubbox.com/heroui-inc/heroui/next-app-template)
+## 📋 Tổng quan dự án
 
-## Technologies Used
+Website tập trung vào ba lĩnh vực văn hóa tiêu biểu của Huế:
 
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [HeroUI v2](https://heroui.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+- 🧵 **Làng nghề truyền thống**: Giới thiệu các sản phẩm thủ công tinh xảo và câu chuyện đằng sau.
+- 🌶️ **Ẩm thực Huế**: Khám phá các món ăn đặc trưng, nguyên liệu và giá trị văn hóa.
+- 🎭 **Nghệ thuật Huế**: Trình bày các hình thức biểu diễn truyền thống và hiện đại.
 
-## How to Use
+Mục tiêu của dự án là tạo ra một cầu nối giữa truyền thống và công nghệ, giúp người dân và du khách tìm hiểu sâu hơn về Festival Huế, từ đó góp phần gìn giữ và lan tỏa bản sắc văn hóa cố đô một cách mới mẻ và gần gũi hơn.
 
-### Use the template with create-next-app
+⏱️ Thời gian phát triển
 
-To create a new project based on this template using `create-next-app`, run the following command:
+- 15/07/2025 - 11/08/2025 (≈ 1 tháng)
 
-```bash
-npx create-next-app -e https://github.com/heroui-inc/next-app-template
+## 🛠️ Công nghệ sử dụng
+
+> **Lưu ý của tác giả**:
+> Code được viết lúc mình vừa học vừa làm nên có nhiều phần chưa được module hoá 100%. Mình cũng đang học cách tổ chức code nên oh well, chúc bạn may mắn sống sót khi đọc qua code. 🙏 🙏 🙏
+
+Dự án này được xây dựng trên nền tảng công nghệ hiện đại, đảm bảo hiệu suất và trải nghiệm người dùng tối ưu.
+
+### Frontend
+
+- **Next.js & React**: Framework chính để xây dựng giao diện người dùng.
+- **Tailwind CSS**: Hỗ trợ xây dựng giao diện nhanh chóng và linh hoạt.
+- **GSAP**: Dùng để animate các hiệu ứng phần **Trang chủ**, **Giới thiệu** và **Footer** (với **ScrollTrigger** và **SplitText**).
+- **Lenis**: Thư viện tối ưu hóa trải nghiệm cuộn trang, mang lại cảm giác mượt mà hơn.
+- **AOS (Animate On Scroll)**: Các hiệu ứng còn lại khi cuộn trang.
+- **Sass**: Tiền xử lý CSS để viết code gọn gàng hơn _(actually là dùng cho biết)_.
+
+### Dependencies khác
+
+Các thư viện hữu ích khác trong dự án:
+
+- `@fortawesome/react-fontawesome`: Icon chất lượng cao từ Font Awesome.
+- `slick-carousel`: Hỗ trợ tạo carousel (ở phần **Làng nghề**).
+- `react-vertical-timeline-component`: Hiển thị timeline theo chiều dọc (ở phần **Nghệ thuật**).
+- Hệ thống component của **Hero UI** (`@heroui`): Một bộ sưu tập các component giao diện người dùng có sẵn.<br><br>
+
+## 🔗 Link preview dự án
+
+- https://festival-hue-v2.pages.dev/
+
+## 🚀 Hướng dẫn cài đặt và chạy dự án
+
+Để chạy dự án này trên máy, bạn có thể làm theo các bước sau:
+
+**1. Clone repository:**
+
+```
+git clone https://github.com/TypingWithBeako/festival-hue-v2
+cd festival-hue-v2
 ```
 
-### Install dependencies
+**2. Cài đặt dependencies:**
+Sử dụng trình quản lý package ưa thích của bạn (npm, yarn hoặc pnpm).
 
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
-
-```bash
+```
 npm install
+
+# hoặc
+yarn install
+
+# hoặc
+pnpm install
 ```
 
-### Run the development server
+**3. Chạy chế độ phát triển (development):**
 
-```bash
+```
 npm run dev
+
+# hoặc
+yarn dev
+
+# hoặc
+pnpm dev
 ```
 
-### Setup pnpm (optional)
+Website sẽ được chạy tại http://localhost:3000.
 
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
+## 🤝 Đóng góp và phản hồi
 
-```bash
-public-hoist-pattern[]=*@heroui/*
-```
-
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
-
-## License
-
-Licensed under the [MIT license](https://github.com/heroui-inc/next-app-template/blob/main/LICENSE).
+Mọi đóng góp và phản hồi để cải thiện dự án đều được chào đón. Bạn có thể mở một Issue hoặc tạo Pull Request trên repository này.

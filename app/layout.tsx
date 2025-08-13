@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site";
 import { fontLiterata, fontSans } from "@/config/fonts";
 import LenisScrollProvider from "@/components/providers/lenis-provider";
 import NavigationBar from "@/components/sections/HeroSection/navbar";
-import { ScrollRestorationManager } from "./ScrollRestorationManager";
+// Optional: import { ScrollRestorationManager } from "./ScrollRestorationManager";
 
 export const metadata: Metadata = {
   title: {
@@ -45,7 +45,9 @@ export default function RootLayout({
               className={`relative flex flex-col w-full z-0 ${fontLiterata.variable}`}
             >
               {children}
-              {/* <ScrollRestorationManager /> */}
+              {/* For clearing scroll position in next visits.
+               Currently work fine, so no need 
+               <ScrollRestorationManager /> */}
             </div>
           </Providers>
         </body>

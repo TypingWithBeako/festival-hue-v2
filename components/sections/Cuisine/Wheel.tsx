@@ -29,7 +29,7 @@ interface FoodItem {
   ingredients?: string[];
   literature?: string;
   literatureFoodName?: string;
-  literatureSource?: string; // Add this line
+  literatureSource?: string;
 }
 
 interface WheelProps {
@@ -44,7 +44,7 @@ export default function Wheel({ onCurrentElementChange }: WheelProps) {
   const [flashId, setFlashId] = useState<number | null>(null);
   const tweensRef = useRef<gsap.core.Tween[]>([]);
   const [isPaused, setIsPaused] = useState(false);
-  const [isMobile, setIsMobile] = useState(false); // State to track if it's mobile
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     AOS.init({
